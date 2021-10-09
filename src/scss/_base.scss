@@ -6,16 +6,32 @@ body {
   font-stretch: normal;
   font-style: normal;
   line-height: 1.4;
+  line-height: 1;
   letter-spacing: normal;
   color: var(--txt11);
   color: #40423f;
   background-color: #555354;
+  background-color: #fcf8f3;
+  font-family: "FSSiena", "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.4;
+  letter-spacing: 0.05rem;
+  position: relative;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-style: italic;
+  letter-spacing: 0.1rem;
 }
 
 // main viewport
 .viewport {
   position: relative;
   overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 // responsive
