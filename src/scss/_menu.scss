@@ -1,3 +1,11 @@
+.menu_off_btn {
+  //z-index: 9;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  /* display: none; */
+}
+
 #main_menu {
   position: fixed;
   top: 0;
@@ -50,7 +58,7 @@
   -o-background-size: cover;
   background-size: cover;
   box-sizing: border-box;
-  background-image: url("../img/site_assets/menu-bkg.jpg");
+  // background-image: url("../img/site_assets/menu-bkg.jpg");
   display: none;
 }
 #main_menu .mmenu-imgsection {

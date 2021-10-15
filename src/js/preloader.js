@@ -11,7 +11,7 @@ function initPreloader() {
   const preBg = document.querySelector(".preloader-bg");
   const preLogo = document.querySelector(".preloader-logo");
 
-  const firstpanel = document.querySelector(".slide");
+  const firstpanel = document.querySelector(".primary-slide");
   const firstcolor = firstpanel.getAttribute("data-bgcolor");
 
   const tl = gsap.timeline();

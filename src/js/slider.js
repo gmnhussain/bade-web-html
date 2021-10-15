@@ -3,11 +3,11 @@ function initSlider() {
   let isAnimating = false;
   let delayTimer = 3000;
 
-  const hasSlider = document.querySelectorAll(".slider").length;
+  const hasSlider = document.querySelectorAll(".primary-slider").length;
 
   if (hasSlider) {
-    slides = document.querySelectorAll(".slide");
-    dots = document.querySelectorAll(".slider-nav-button");
+    slides = document.querySelectorAll(".primary-slide");
+    dots = document.querySelectorAll(".primary-dot");
     currentSlide = 0;
 
     sliderStartUp();
