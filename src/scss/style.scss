@@ -5,9 +5,13 @@
 @use "animations";
 @use "base";
 
-@use "menu";
 @use "header";
 @use "footer";
+@use "blocks/menu";
+@use "blocks/preloader";
+@use "blocks/sec-banner";
+@use "blocks/sec-text";
+@use "blocks/sec-image";
 @use "primary-slider";
 
 @use "pages/home";

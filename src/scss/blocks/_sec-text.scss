@@ -1,0 +1,26 @@
+// text section primary
+.s_text_primary {
+  padding: 62px 40px;
+}
+.s_text_primary p {
+  max-width: 1308px;
+  margin: 0 auto;
+  font-family: BegumSans;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: left;
+  color: #32322f;
+}
+
+@media screen and (min-width: 1281px) {
+  .s_text_primary {
+    padding: 160px 40px;
+  }
+  .s_text_primary p {
+    font-size: 45px;
+    line-height: 70px;
+    text-align: center;
+    color: #393939;
+  }
+}

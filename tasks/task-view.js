@@ -4,15 +4,15 @@ const beautify = require("gulp-beautify");
 
 const sections = {
   index: [
-    "./src/views/header.html", //
+    "./src/views/header/header-primary.html", //
     "./src/views/home.html",
-    "./src/views/footer.html",
+    "./src/views/footer/footer-secondary.html",
   ],
-  // "blog-list": [
-  //   "./src/views/header.html", //
-  //   "./src/views/blog-list.html",
-  //   "./src/views/footer.html",
-  // ],
+  hotel: [
+    "./src/views/header/header-primary.html", //
+    "./src/views/hotel.html",
+    "./src/views/footer/footer-primary.html",
+  ],
 };
 
 const createTask = (key) => {

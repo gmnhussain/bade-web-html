@@ -11,7 +11,9 @@ function initPreloader() {
   const preBg = document.querySelector(".preloader-bg");
   const preLogo = document.querySelector(".preloader-logo");
 
-  const firstpanel = document.querySelector(".primary-slide");
+  const firstpanel =
+    document.querySelector(".primary-slide") ||
+    document.querySelector(".first_color");
   const firstcolor = firstpanel.getAttribute("data-bgcolor");
 
   const tl = gsap.timeline();
@@ -35,6 +37,6 @@ function initPreloader() {
     });
 }
 
-window.addEventListener("load", () => {
-  initPreloader();
-});
+// window.addEventListener("load", () => {
+//   initPreloader();
+// });
