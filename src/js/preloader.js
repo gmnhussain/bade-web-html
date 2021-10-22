@@ -1,5 +1,27 @@
+function setBgColor() {
+  const elmns = document.querySelectorAll("[data-setbg]");
+  elmns.forEach((elmn) => {
+    let color = elmn.getAttribute("data-setbg");
+    elmn.style.backgroundColor = color;
+  });
+}
+
 function setPageLoad() {
   document.body.classList.add("loaded");
+}
+
+function setSubscriptionOn() {
+  const subscription = document.getElementById("main_subscription");
+  if (subscription) {
+    subscription.classList.add("open");
+  }
+}
+
+function setSubscriptionOff() {
+  const subscription = document.getElementById("main_subscription");
+  if (subscription && subscription.classList.contains("open")) {
+    subscription.classList.remove("open");
+  }
 }
 
 function hidePreloader() {
@@ -37,6 +59,17 @@ function initPreloader() {
     });
 }
 
-// window.addEventListener("load", () => {
-//   initPreloader();
+window.addEventListener("load", () => {
+  initPreloader();
+  initSlider();
+  initSecondarySlider();
+  setBgColor();
+
+  // setTimeout(() => {
+  //   setSubscriptionOn();
+  // }, 10000);
+});
+
+// $(".msubs_offbtn").on("click", () => {
+//   setSubscriptionOff();
 // });

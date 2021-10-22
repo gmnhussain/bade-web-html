@@ -24,8 +24,30 @@ body {
   overflow-x: hidden;
   width: 100vw;
   height: 100vh;
+  // update
+  height: auto;
 }
 
 // responsive
 @media only screen and (max-width: 576px) {
+}
+
+// slider control btn
+.scbtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.scbtn_prev {
+}
+.scbtn_next {
+}
+.scbtn svg {
+}
+.scbtn svg line {
+  stroke: #c2d5c1;
+  transition: stroke 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.scbtn:hover svg line {
+  stroke: #393939;
 }

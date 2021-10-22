@@ -1,6 +1,6 @@
 // text section primary
 .s_text_primary {
-  padding: 62px 40px;
+  padding: 62px 32px;
 }
 .s_text_primary p {
   max-width: 1308px;
@@ -13,7 +13,7 @@
   color: #32322f;
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1024px) {
   .s_text_primary {
     padding: 160px 40px;
   }

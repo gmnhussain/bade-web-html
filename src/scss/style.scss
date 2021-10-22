@@ -7,11 +7,15 @@
 
 @use "header";
 @use "footer";
-@use "blocks/menu";
-@use "blocks/preloader";
+
+@use "utils/preloader";
+@use "utils/menu";
+@use "utils/subscription";
+@use "utils/primary-slider";
+@use "utils/secondary-slider";
+
 @use "blocks/sec-banner";
 @use "blocks/sec-text";
 @use "blocks/sec-image";
-@use "primary-slider";
 
 @use "pages/home";

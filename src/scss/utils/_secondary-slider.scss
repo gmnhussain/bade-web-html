@@ -1,0 +1,108 @@
+.secondary_slider_sec_next {
+  width: 100%;
+  height: 50px;
+  background-color: #f9f7f0;
+}
+
+.secondary_slider_wrapper {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.secondary_slider {
+  width: 100%;
+  margin-bottom: 0;
+  z-index: 1;
+  position: relative;
+}
+.secondary_slides {
+  width: 100%;
+  padding-top: 132%;
+  position: relative;
+  margin-bottom: 0;
+}
+.secondary_slide {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.active.secondary_slide {
+  opacity: 1;
+}
+.secondary_slide .slide_img {
+  width: 100%;
+  height: 100%;
+}
+.secondary_slide .slide_img picture {
+  width: 100%;
+  height: 100%;
+}
+.secondary_slide .slide_img picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.ssnav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .secondary_slider_sec_next {
+    height: 300px;
+    width: 100%;
+    background-color: #f9f7f0;
+    position: relative;
+  }
+  .secondary_slider_wrapper {
+    width: 100%;
+    padding: 130px 188px 0;
+    overflow: visible;
+  }
+  .secondary_slider {
+    width: 100%;
+    margin-bottom: -218px;
+    z-index: 1;
+    position: relative;
+  }
+  .secondary_slides {
+    width: 100%;
+    padding-top: 50%;
+    position: relative;
+    margin-bottom: 56px;
+  }
+  .ssnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ssnav_progress {
+    width: calc(80% - 100px);
+    height: 1px;
+    background-color: #c2d5c1;
+    position: relative;
+  }
+  .ssnav_progress span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    background-color: #393939;
+    transition: width 750ms ease-in-out 250ms !important;
+  }
+  .ssnav_btns {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 240px;
+  }
+  .ssnav_btn {
+  }
+}

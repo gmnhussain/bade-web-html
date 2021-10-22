@@ -1,5 +1,5 @@
 // overlay menu
-$(".menu_icon").on("click", function (e) {
+$("#menu_button, .mmenu_onbtn").on("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
   if ($(".menu-on").length > 0) {
@@ -10,7 +10,7 @@ $(".menu_icon").on("click", function (e) {
   }
 });
 
-$(".menu_off_btn").on("click", function (e) {
+$(".mmb-on").on("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
   if ($(".menu-on").length > 0) {

@@ -4,13 +4,15 @@ const beautify = require("gulp-beautify");
 
 const sections = {
   index: [
-    "./src/views/header/header-primary.html", //
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-secondary.html",
     "./src/views/home.html",
     "./src/views/footer/footer-secondary.html",
   ],
-  hotel: [
-    "./src/views/header/header-primary.html", //
-    "./src/views/hotel.html",
+  badehotellet: [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-primary.html",
+    "./src/views/badehotellet.html",
     "./src/views/footer/footer-primary.html",
   ],
 };
