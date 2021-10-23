@@ -13,9 +13,12 @@
 @use "utils/subscription";
 @use "utils/primary-slider";
 @use "utils/secondary-slider";
+@use "utils/tertiary-slider";
 
 @use "blocks/sec-banner";
 @use "blocks/sec-text";
 @use "blocks/sec-image";
 
 @use "pages/home";
+@use "pages/contact";
+@use "pages/alle-vaerelser";

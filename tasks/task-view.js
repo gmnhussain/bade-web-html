@@ -3,6 +3,7 @@ const concat = require("gulp-concat");
 const beautify = require("gulp-beautify");
 
 const sections = {
+  pages: ["./src/views/pages.html"],
   index: [
     "./src/views/header/head-primary.html", //
     "./src/views/header/header-secondary.html",
@@ -19,6 +20,18 @@ const sections = {
     "./src/views/header/head-primary.html", //
     "./src/views/header/header-primary.html",
     "./src/views/oplev-bornholm.html",
+    "./src/views/footer/footer-primary.html",
+  ],
+  kontakt: [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-primary.html",
+    "./src/views/kontakt.html",
+    "./src/views/footer/footer-primary.html",
+  ],
+  "alle-vaerelser": [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-primary.html",
+    "./src/views/alle-vaerelser.html",
     "./src/views/footer/footer-primary.html",
   ],
 };

@@ -32,6 +32,10 @@ body {
 @media only screen and (max-width: 576px) {
 }
 
+// page wrapper
+.page_wrapper {
+}
+
 // slider control btn
 .scbtn {
   cursor: pointer;
@@ -50,4 +54,35 @@ body {
 }
 .scbtn:hover svg line {
   stroke: #393939;
+}
+
+// buttons
+.btn_primary {
+  display: block;
+  width: 229px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #7b7564;
+  transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  font-family: BegumSans;
+  font-weight: 400;
+  font-size: 15px;
+  color: #7b7564;
+}
+
+.btn_primary:hover {
+  background-color: #c2d5c1;
+  color: #ffffff;
+  border-color: #c2d5c1;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_primary {
+    width: 320px;
+    height: 75px;
+    font-size: 21px;
+  }
 }
