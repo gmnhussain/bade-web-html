@@ -148,41 +148,38 @@ function initSecondarySlider() {
 }
 
 function initTertiarySlider(slider) {
-  // Select all slides and convert node to array for easy handling
   const images = [...slider.querySelectorAll(".ts_images .tsi_item")];
   const contents = [...slider.querySelectorAll(".ts_contents .tsc_item")];
 
-  // select forward and back controller button
   const backButton = slider.querySelector(".tsbtn_prev");
   const forwardButton = slider.querySelector(".tsbtn_next");
 
-  // declare necessary variables
   let clickable = true,
-    activeSlide = 0,
-
+    activeSlide = 0;
 
   // initial state
-  // function initSliderState(slides, active) {
-  //   slides.forEach((slide, index) => {
-  //     if (index === active) {
-  //       gsap.to(slide, {
-  //         duration: 0,
-  //         zIndex: 3,
-  //         xPercent: 0,
-  //         yPercent: 0,
-  //         opacity: 1,
-  //       });
-  //     } else {
-  //       gsap.to(slide, {
-  //         duration: 0,
-  //         zIndex: 0,
-  //         xPercent: -25,
-  //         yPercent: 0,
-  //         opacity: 0,
-  //       });
-  //     }
-  //   });
-  // }
+  function initSliderState() {
+    images.forEach((slide, index) => {
+      if (index === activeSlide) {
+        gsap.to(slide, {
+          duration: 0,
+          zIndex: 2,
+          xPercent: 0,
+          yPercent: 0,
+          opacity: 1,
+        });
+      } else {
+        gsap.to(slide, {
+          duration: 0,
+          zIndex: 1,
+          xPercent: 0,
+          yPercent: 0,
+          opacity: 1,
+        });
+      }
+    });
+  }
+  initSliderState();
 
   // initSliderState(slidesLarge, activeLarge);
   // initSliderState(slidesSmall, activeSmall);
@@ -196,26 +193,15 @@ function initTertiarySlider(slider) {
     //let contents = slider.querySelectorAll(".ts_contents .tsc_item");
 
     let t,
-      // n = this._state,
-      i = active,
-      r = newIndex,
-      u = forward ? "next" : "previous",
-      s = slides[i],
-      l = slides[r],
-      c = l.querySelector("img"),
-      f = contents[i],
-      h = contents[r],
-      p = f.querySelectorAll(".ts_stagger"),
-      D = h.querySelectorAll(".ts_stagger");
+      lastImage = slides[active],
+      newImage = slides[newIndex],
+      c = newImage.querySelector("img"),
+      lastContent = contents[active],
+      newContent = contents[newIndex],
+      p = lastContent.querySelectorAll(".ts_stagger"),
+      D = newContent.querySelectorAll(".ts_stagger");
 
-    t =
-      "next" === u
-        ? [[100, -100], -25]
-        : "previous" === u
-        ? [[-100, 100], 25]
-        : r > i
-        ? [[100, -100], -25]
-        : [[-100, 100], 25];
+    t = forward ? [0, -100] : [0, 100];
 
     const tweens = gsap.timeline({
       force3D: 1,
@@ -225,14 +211,18 @@ function initTertiarySlider(slider) {
     });
 
     tweens
-      .set([l, h], {
+      .set([newImage, newContent], {
         autoAlpha: 1,
         zIndex: 2,
       })
+      .set([lastImage, lastContent], {
+        autoAlpha: 1,
+        zIndex: 3,
+      })
       .fromTo(
-        [l],
+        [newImage],
         {
-          xPercent: 25,
+          xPercent: t[0],
         },
         {
           duration: 1.1,
@@ -243,13 +233,13 @@ function initTertiarySlider(slider) {
         0
       )
       .fromTo(
-        s,
+        lastImage,
         {
           xPercent: 0,
         },
         {
           duration: 1.1,
-          xPercent: -100,
+          xPercent: t[1],
           ease: "expo.inOut",
         },
         0
@@ -282,16 +272,18 @@ function initTertiarySlider(slider) {
         },
         0.5
       )
-      .set(s, {
+      .set(lastImage, {
         autoAlpha: 0,
         clearProps: "zIndex, xPercent",
+        zIndex: 2,
       })
-      .set(f, {
+      .set(lastContent, {
         autoAlpha: 0,
         clearProps: "zIndex",
       })
-      .set([l, h], {
-        clearProps: "zIndex",
+      .set([newImage, newContent], {
+        // clearProps: "zIndex",
+        zIndex: 3,
       });
 
     return newIndex;
