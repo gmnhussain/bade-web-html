@@ -1,4 +1,4 @@
-function initSlider() {
+function initPrimarySlider() {
   let slides, dots, currentSlide, previousSlide;
   let isAnimating = false;
   let delayTimer = 3000;

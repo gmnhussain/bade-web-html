@@ -85,103 +85,139 @@
 .s_image_secondary {
   padding: 0 15px 60px;
   background-color: #f9f7f0;
+}
+.s_image_secondary:first-child {
+  margin-top: 60px;
+}
 
-  &:first-child {
-    margin-top: 60px;
-  }
+.s_image_secondary .s_image_ctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform: translateY(-60px);
+}
 
-  .s_image_ctn {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transform: translateY(-60px);
-  }
-
-  .s_image {
-    width: 100%;
-  }
-  .s_image picture {
-    width: 100%;
-  }
-  .s_image img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-  .s_image_detail {
-    width: 100%;
-    padding: 32px;
-    background-color: #fff;
-  }
-  .s_image_detail h1 {
-    font-family: BegumSans;
-    font-size: 29px;
-    font-weight: 400;
-    line-height: 42px;
-    text-align: center;
-    color: #7b7564;
-    text-transform: uppercase;
-    margin-bottom: 42px;
-  }
-  .s_image_detail p {
-    font-family: MartelSans;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #32322f;
-    text-align: center;
-    margin-bottom: 21px;
-  }
-  .s_image_detail p:last-child {
-    margin-bottom: 0;
-  }
+.s_image_secondary .s_image {
+  width: 100%;
+}
+.s_image_secondary .s_image picture {
+  width: 100%;
+}
+.s_image_secondary .s_image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.s_image_secondary .s_image_detail {
+  width: 100%;
+  padding: 32px;
+  background-color: #fff;
+  text-align: center;
+}
+.s_image_secondary .s_image_detail h1 {
+  font-family: BegumSans;
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 42px;
+  color: #7b7564;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.s_image_secondary .s_image_detail p {
+  font-family: MartelSans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #32322f;
+  margin-bottom: 21px;
 }
 
 @media screen and (min-width: 1024px) {
   .s_image_secondary {
-    padding: 60px 133px;
-    background-color: #f9f7f0;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
 
-    .s_image_ctn {
-      width: 100%;
-      padding-top: 49.5%;
-      position: relative;
-    }
+@media screen and (min-width: 1280px) {
+  .s_image_secondary {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 300px;
+  }
+  .s_image_secondary .s_image_ctn {
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+  }
+  .s_image_secondary.img_left .s_image_ctn {
+    justify-content: flex-start;
+  }
+  .s_image_secondary.img_right .s_image_ctn {
+    justify-content: flex-end;
+  }
 
-    .s_image {
-      width: 79.3%;
-      height: 100%;
-      position: absolute;
-    }
-    .s_image_detail {
-      width: 40.9%;
-      position: absolute;
-      background-color: #fff;
-      padding: 50px 42px;
-      z-index: 11;
-      top: 108px;
-      min-height: 94%;
-    }
+  .s_image_secondary .s_image {
+    width: 64%;
+    padding-top: 48%;
+    position: relative;
+  }
+  .s_image_secondary .s_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .s_image_secondary .s_image_detail {
+    width: 68%;
+    padding: 110px 68px;
+    z-index: 11;
+    top: 106px;
+    min-height: calc(100% - 38px);
+    position: absolute;
+    text-align: left;
+  }
+  .s_image_secondary.img_left .s_image_detail {
+    right: 0;
+  }
+  .s_image_secondary.img_right .s_image_detail {
+    left: 0;
+  }
+}
 
-    &.img_right .s_image,
-    &.img_left .s_image_detail {
-      right: 0;
-    }
-    &.img_left .s_image,
-    &.img_right .s_image_detail {
-      left: 0;
-    }
+@media screen and (min-width: 1600px) {
+  .s_image_secondary {
+    padding-left: 134px;
+    padding-right: 96px;
+    padding-bottom: 300px;
+  }
 
-    .s_image_detail h1 {
-      font-size: 37px;
-      line-height: 59px;
-      margin-bottom: 68px;
-    }
-    .s_image_detail p {
-      font-size: 18px;
-      line-height: 34px;
-      margin-bottom: 46px;
-    }
+  .s_image_secondary .s_image {
+    width: 79%;
+    padding-top: 0;
+  }
+  .s_image_secondary .s_image img {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: auto;
+  }
+  .s_image_secondary .s_image_detail {
+    width: 42%;
+    padding: 108px 68px;
+  }
+
+  .s_image_secondary .s_image_detail h1 {
+    font-size: 36px;
+    line-height: 58px;
+    margin-bottom: 42px;
+  }
+
+  .s_image_secondary .s_image_detail p {
+    font-size: 18px;
+    line-height: 34px;
+    margin-bottom: 34px;
   }
 }

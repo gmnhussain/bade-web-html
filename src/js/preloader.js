@@ -59,17 +59,6 @@ function initPreloader() {
     });
 }
 
-window.addEventListener("load", () => {
-  initPreloader();
-  initSlider();
-  initSecondarySlider();
-  setBgColor();
-
-  // setTimeout(() => {
-  //   setSubscriptionOn();
-  // }, 10000);
-});
-
 // $(".msubs_offbtn").on("click", () => {
 //   setSubscriptionOff();
 // });
