@@ -66,11 +66,11 @@ body {
   align-items: center;
   border: 1px solid #7b7564;
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-
   font-family: BegumSans;
   font-weight: 400;
   font-size: 15px;
   color: #7b7564;
+  text-transform: uppercase;
 }
 
 .btn_primary:hover {

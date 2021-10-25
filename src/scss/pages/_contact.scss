@@ -88,6 +88,7 @@
     position: relative;
     margin-bottom: 38px;
     width: 100%;
+    max-width: 710px;
     input,
     textarea {
       padding-top: 25px;
@@ -101,13 +102,15 @@
       font-size: 14px;
       color: #393939;
       position: absolute;
-      top: 0;
       left: 0;
-      transition: top 0.3s ease-in-out 0.2s;
+      transition: all 0.3s ease-in-out 0.2s;
+      bottom: 26px;
     }
-    input:focus ~ label,
+    input:focus ~ label {
+      bottom: 46px;
+    }
     textarea:focus ~ label {
-      top: -20px;
+      bottom: 100%;
     }
     &:last-child {
       margin-bottom: 60px;
@@ -117,6 +120,7 @@
   .c_btn {
     display: flex;
     justify-content: flex-start;
+    margin-top: 11px;
     button {
     }
   }
@@ -177,9 +181,11 @@
       label {
         font-size: 18px;
       }
-      input:focus ~ label,
+      input:focus ~ label {
+        bottom: 46px;
+      }
       textarea:focus ~ label {
-        top: -20px;
+        bottom: 100%;
       }
       &:last-child {
         margin-bottom: 95px;
@@ -192,5 +198,11 @@
       button {
       }
     }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .s_contact {
+    padding: 162px 180px;
   }
 }
