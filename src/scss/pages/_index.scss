@@ -1,2 +1,30 @@
+// oplev_page
 .oplev_page {
+}
+
+// badehotellet_page
+.badehotellet_page {
+}
+.badehotellet_page .s_text_primary {
+  text-align: left;
+}
+.badehotellet_page .secondary_slider {
+  width: 100%;
+  margin-bottom: 0;
+  z-index: 1;
+  position: relative;
+}
+.badehotellet_page .secondary_slider_sec_next {
+  width: 100%;
+  padding-top: 50px;
+  background-color: #f9f7f0;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .badehotellet_page .secondary_slider {
+    margin-bottom: -218px;
+  }
+  .badehotellet_page .secondary_slider_sec_next {
+    padding-top: 300px;
+  }
 }

@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
   initPreloader();
   initPrimarySlider();
   initSecondarySlider();
-  setBgColor();
+  // setBgColor();
   animationFadeInUpOnScroll();
 
   // setTimeout(() => {

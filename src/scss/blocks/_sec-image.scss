@@ -61,8 +61,11 @@
   }
   .s_image_primary .s_image,
   .s_image_primary .s_image_detail {
-    width: calc(50% - 90px);
+    width: calc(50% - 50px);
   }
+  // .s_image_primary .s_image_detail {
+  //   padding-right: 40px;
+  // }
   .s_image_primary .s_image_detail h1 {
     font-size: 53px;
     line-height: 78px;

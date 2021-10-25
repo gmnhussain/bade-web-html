@@ -1,10 +1,10 @@
-function setBgColor() {
-  const elmns = document.querySelectorAll("[data-setbg]");
-  elmns.forEach((elmn) => {
-    let color = elmn.getAttribute("data-setbg");
-    elmn.style.backgroundColor = color;
-  });
-}
+// function setBgColor() {
+//   const elmns = document.querySelectorAll("[data-setbg]");
+//   elmns.forEach((elmn) => {
+//     let color = elmn.getAttribute("data-setbg");
+//     elmn.style.backgroundColor = color;
+//   });
+// }
 
 function setPageLoad() {
   document.body.classList.add("loaded");
