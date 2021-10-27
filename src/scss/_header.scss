@@ -42,22 +42,23 @@
 
 // banner_back_btn
 .banner_back_btn {
-  right: 104px;
-  top: 104px;
+  right: 0;
+  top: 0;
   position: absolute;
   display: block;
   width: 59px;
   height: 59px;
-  border: 2px solid #fff;
+  border: 2px solid #f9f7f0;
   z-index: 11;
   transition: all 0.3s ease-in-out;
+  background-color: #f9f7f0;
 }
 .banner_back_btn::after,
 .banner_back_btn::before {
   content: "";
-  width: 52%;
-  height: 2px;
-  background-color: #fff;
+  width: 50%;
+  height: 1px;
+  background-color: #393939;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -77,6 +78,25 @@
 .banner_back_btn:hover::after,
 .banner_back_btn:hover::before {
   background-color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner_back_btn {
+    right: 104px;
+    top: 104px;
+    border-color: #fff;
+    background-color: transparent;
+  }
+  .banner_back_btn::after,
+  .banner_back_btn::before {
+    background-color: #fff;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner_back_btn {
+    right: 104px;
+    top: 104px;
+  }
 }
 
 // menu btn

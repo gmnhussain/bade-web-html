@@ -66,15 +66,3 @@
 // vaerelse_visning_page
 .vaerelse_visning_page {
 }
-
-@media screen and (min-width: 1024px) {
-  .vaerelse_visning_page .s_grid_primary .grid_detail {
-    width: 48%;
-  }
-  .vaerelse_visning_page .s_grid_primary .grid_summary {
-    width: 52%;
-  }
-  .vaerelse_visning_page .s_grid_primary .grid_summary .sum_list:nth-child(1) {
-    margin-right: 50px;
-  }
-}

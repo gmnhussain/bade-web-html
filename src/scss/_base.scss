@@ -38,8 +38,18 @@ body {
 
 // page_width
 .page_width {
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .page_ctn {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .page_width {
+    padding: 0 188px;
+    padding-left: 166px;
+    padding-right: 166px;
+  }
 }
 
 // slider control btn
@@ -103,4 +113,16 @@ body {
 
 // link_r
 .link_r {
+}
+
+// background color
+// regular, primary, secondary
+.bgcolor_r {
+  background-color: #ffffff;
+}
+.bgcolor_p {
+  background-color: #f9f7f0;
+}
+.bgcolor_s {
+  background-color: #f5ebe4;
 }

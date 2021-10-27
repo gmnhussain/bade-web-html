@@ -1,6 +1,6 @@
 .s_vwidth_slider {
   width: 100%;
-  padding-top: 46%;
+  padding-top: 86%;
   position: relative;
 }
 .vwidth_slider_wrapper {
@@ -9,7 +9,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 7;
 }
 .vwidth_slider {
   width: 100%;
@@ -18,14 +18,17 @@
 }
 .vwidth_slides {
   height: 100%;
+  width: 100%;
 }
 .vwidth_img {
   height: 100%;
-  width: auto;
+  width: calc(100% - 60px);
 }
 .vwidth_img img {
   height: 100%;
-  width: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .vwidth_slider_next,
@@ -44,4 +47,25 @@
 .vwidth_slider_next {
   right: 0;
   cursor: url(../img/icon/arrow-right.svg), auto !important;
+}
+
+@media screen and (min-width: 576px) {
+  .s_vwidth_slider {
+    padding-top: 62%;
+  }
+  .vwidth_img {
+    width: calc(100% - 120px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .s_vwidth_slider {
+    padding-top: 46%;
+  }
+  .vwidth_img {
+    width: auto;
+  }
+  .vwidth_img img {
+    width: auto;
+  }
 }

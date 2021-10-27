@@ -320,8 +320,16 @@ const vwidthSlider = new Swiper(".vwidth_slider", {
   loop: true,
   slidesPerView: "auto",
   spaceBetween: 10,
+  centeredSlides: true,
   navigation: {
     nextEl: ".vwidth_slider_next",
     prevEl: ".vwidth_slider_prev",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: "auto",
+      centeredSlides: false,
+      spaceBetween: 10,
+    },
   },
 });
