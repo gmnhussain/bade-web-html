@@ -46,6 +46,12 @@ const sections = {
     "./src/views/bornholm-med-bil.html",
     "./src/views/footer/footer-primary.html",
   ],
+  "vaerelse-visning": [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-tertiary.html",
+    "./src/views/vaerelse-visning.html",
+    "./src/views/footer/footer-primary.html",
+  ],
 };
 
 const createTask = (key) => {

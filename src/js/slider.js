@@ -314,3 +314,14 @@ const tertiarySlider = [...document.querySelectorAll(".tertiary_slider")];
 tertiarySlider.forEach((slider) => {
   initTertiarySlider(slider);
 });
+
+// vwidth slider
+const vwidthSlider = new Swiper(".vwidth_slider", {
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".vwidth_slider_next",
+    prevEl: ".vwidth_slider_prev",
+  },
+});
