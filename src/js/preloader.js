@@ -36,7 +36,10 @@ function initPreloader() {
   const firstpanel =
     document.querySelector(".primary-slide") ||
     document.querySelector(".first_color");
-  const firstcolor = firstpanel.getAttribute("data-bgcolor");
+
+  const firstcolor = firstpanel
+    ? firstpanel.getAttribute("data-bgcolor")
+    : "#F9F7F0";
 
   const tl = gsap.timeline();
 

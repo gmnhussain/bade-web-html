@@ -57,7 +57,8 @@ body {
 }
 
 // buttons
-.btn_primary {
+.btn_primary,
+.btn_primary_rev {
   display: block;
   width: 229px;
   height: 64px;
@@ -73,10 +74,17 @@ body {
   text-transform: uppercase;
 }
 
-.btn_primary:hover {
+.btn_primary:hover,
+.btn_primary_rev {
   background-color: #c2d5c1;
   color: #ffffff;
   border-color: #c2d5c1;
+}
+
+.btn_primary_rev:hover {
+  color: #7b7564;
+  border-color: #7b7564;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 1024px) {
