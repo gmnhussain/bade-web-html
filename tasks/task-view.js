@@ -34,6 +34,12 @@ const sections = {
     "./src/views/alle-vaerelser.html",
     "./src/views/footer/footer-primary.html",
   ],
+  midtugeophold: [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-tertiary.html",
+    "./src/views/midtugeophold.html",
+    "./src/views/footer/footer-primary.html",
+  ],
 };
 
 const createTask = (key) => {
