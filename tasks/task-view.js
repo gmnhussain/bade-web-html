@@ -40,6 +40,12 @@ const sections = {
     "./src/views/midtugeophold.html",
     "./src/views/footer/footer-primary.html",
   ],
+  "bornholm-med-bil": [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-primary.html",
+    "./src/views/bornholm-med-bil.html",
+    "./src/views/footer/footer-primary.html",
+  ],
 };
 
 const createTask = (key) => {
