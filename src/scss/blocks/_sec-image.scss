@@ -59,6 +59,9 @@
   .s_image_primary.img_left {
     flex-direction: row;
   }
+  .s_image_primary.img_top {
+    flex-direction: column;
+  }
   .s_image_primary .s_image,
   .s_image_primary .s_image_detail {
     width: calc(50% - 50px);
@@ -221,3 +224,5 @@
     margin-bottom: 34px;
   }
 }
+
+// section image tertiary

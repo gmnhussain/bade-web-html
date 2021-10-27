@@ -16,7 +16,9 @@
   flex-direction: column;
   border-bottom: 1px solid #393939;
 }
-.s_grid_primary.sum_right .grid_ctn {
+.s_grid_primary.detail_left .grid_ctn {
+}
+.s_grid_primary.detail_right .grid_ctn {
 }
 .s_grid_primary .grid_detail .subtitle {
   font-family: MartelSans;
@@ -87,7 +89,7 @@
     border-right: 1px solid #393939;
     padding-right: 84px;
   }
-  .s_grid_primary.sum_right .grid_ctn {
+  .s_grid_primary.detail_left .grid_ctn {
     flex-direction: row;
   }
   .s_grid_primary .grid_detail .subtitle {
