@@ -1,0 +1,32 @@
+.s_btn_primary {
+  background-color: #f9f7f0;
+  padding: 50px 32px;
+}
+.s_btn_primary .s_btn_ctn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.s_btn_primary .s_btn_ctn p {
+  display: none;
+}
+.s_btn_primary .s_btn_ctn a.btn {
+}
+
+@media screen and (min-width: 1024px) {
+  .s_btn_primary {
+    padding: 100px 166px;
+  }
+  .s_btn_primary .s_btn_ctn p {
+    display: block;
+    font-family: BegumSans;
+    font-weight: 400;
+    font-size: 45px;
+    color: #393939;
+    margin-bottom: 55px;
+  }
+  .s_btn_primary .s_btn_ctn a.btn {
+  }
+}
