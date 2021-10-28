@@ -80,10 +80,10 @@
   background-color: #fff;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .banner_back_btn {
-    right: 104px;
-    top: 104px;
+    right: 77px;
+    top: 77px;
     border-color: #fff;
     background-color: transparent;
   }
@@ -92,7 +92,15 @@
     background-color: #fff;
   }
 }
+
 @media screen and (min-width: 1280px) {
+  .banner_back_btn {
+    right: 90px;
+    top: 90px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .banner_back_btn {
     right: 104px;
     top: 104px;
@@ -239,7 +247,7 @@
   transform: translate3d(0, 0, 0);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .menu_button {
     display: block;
   }
@@ -283,7 +291,7 @@
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .banner_nav {
     z-index: 1;
     right: 115px;
@@ -332,21 +340,21 @@
   }
 
   .banner_logo {
-    top: 123px;
+    top: 90px;
     left: 90px;
   }
   .banner_logo a img {
-    width: 300px;
+    width: 180px;
   }
 
   .banner_btn {
     display: block;
     pointer-events: none;
-    width: 263px;
-    height: 82px;
+    width: 200px;
+    height: 63px;
     position: absolute;
-    top: 146px;
-    right: 240px;
+    top: 87px;
+    right: 170px;
     opacity: 0;
     transition: opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-delay: 0.7s;
@@ -361,7 +369,7 @@
     height: 100%;
     border: 2px solid #fff;
     font-family: BegumSans;
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 400;
     color: #fff;
   }
@@ -372,5 +380,42 @@
   .loaded .banner_btn {
     opacity: 1;
     pointer-events: all;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1280px) {
+  .banner_logo a img {
+    width: 220px;
+  }
+  .banner_btn {
+    width: 224px;
+    height: 68px;
+    top: 100px;
+    right: 206px;
+  }
+  .banner_btn a {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner_logo {
+    top: 110px;
+    left: 110px;
+  }
+  .banner_logo a img {
+    width: 300px;
+  }
+  .banner_btn {
+    width: 263px;
+    height: 82px;
+    top: 146px;
+    right: 240px;
+  }
+  .banner_btn a {
+    font-size: 22px;
   }
 }
