@@ -9,13 +9,13 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-  // visibility: hidden;
-  display: none;
+  visibility: hidden;
+  // display: none;
   transition: opacity 700ms ease-in-out;
 }
 .main_subscription.open {
   opacity: 1;
-  // visibility: visible;
+  visibility: visible;
 }
 .msubs_backdrop {
   position: absolute;

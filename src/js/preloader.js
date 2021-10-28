@@ -68,6 +68,6 @@ function initPreloader() {
     });
 }
 
-// $(".msubs_offbtn").on("click", () => {
-//   setSubscriptionOff();
-// });
+$(".msubs_offbtn").on("click", () => {
+  setSubscriptionOff();
+});

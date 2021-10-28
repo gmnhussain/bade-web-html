@@ -310,11 +310,6 @@ function initTertiarySlider(slider) {
   });
 }
 
-const tertiarySlider = [...document.querySelectorAll(".tertiary_slider")];
-tertiarySlider.forEach((slider) => {
-  initTertiarySlider(slider);
-});
-
 // vwidth slider
 const vwidthSlider = new Swiper(".vwidth_slider", {
   loop: true,

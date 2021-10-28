@@ -9,7 +9,15 @@ window.addEventListener("load", () => {
   // setBgColor();
   animationFadeInUpOnScroll();
 
-  // setTimeout(() => {
-  //   setSubscriptionOn();
-  // }, 10000);
+  // tertiary slider
+  const tertiarySlider = [...document.querySelectorAll(".tertiary_slider")];
+  if (tertiarySlider.length) {
+    tertiarySlider.forEach((slider) => {
+      initTertiarySlider(slider);
+    });
+  }
+
+  setTimeout(() => {
+    setSubscriptionOn();
+  }, 10000);
 });

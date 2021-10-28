@@ -6,8 +6,10 @@ function animationFadeInUpOnScroll() {
       let t = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "350px bottom",
-          toggleActions: "play none none reverse",
+          // start: "350px bottom",
+          start: "200px bottom",
+          // toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
