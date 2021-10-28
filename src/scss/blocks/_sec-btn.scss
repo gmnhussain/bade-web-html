@@ -1,6 +1,5 @@
 .s_btn_primary {
-  background-color: #f9f7f0;
-  padding-top: 50px;
+  padding-top: 58px;
   padding-bottom: 50px;
 }
 .s_btn_primary .s_btn_ctn {
@@ -14,22 +13,53 @@
   display: none;
 }
 .s_btn_primary .s_btn_ctn a.btn {
+  min-width: 258px;
 }
 
 @media screen and (min-width: 1024px) {
   .s_btn_primary {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 118px;
+    padding-bottom: 25px;
   }
   .s_btn_primary .s_btn_ctn p {
     display: block;
     font-family: BegumSans;
     font-weight: 400;
-    font-size: 45px;
+    font-size: 26px;
     color: #393939;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
     text-align: center;
   }
   .s_btn_primary .s_btn_ctn a.btn {
+    max-width: 280px;
+    height: 71px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .s_btn_primary {
+  }
+  .s_btn_primary .s_btn_ctn p {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  .s_btn_primary .s_btn_ctn a.btn {
+    max-width: 300px;
+    height: 73px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .s_btn_primary {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .s_btn_primary .s_btn_ctn p {
+    font-size: 45px;
+    margin-bottom: 55px;
+  }
+  .s_btn_primary .s_btn_ctn a.btn {
+    max-width: 310px;
+    height: 73px;
   }
 }
