@@ -8,18 +8,26 @@
 
 @media screen and (min-width: 1024px) {
   .contact_page .s_image_primary {
-    padding-top: 191px;
-    padding-bottom: 191px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contact_page .s_image_primary {
+    padding-top: 140px;
+    padding-bottom: 140px;
   }
 }
 
 .s_contact {
   background-color: #f9f7f0;
-  padding: 76px 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding-top: 76px;
+  padding-bottom: 0;
 }
 .contact_detail {
   display: flex;
@@ -128,14 +136,153 @@
 
 @media screen and (min-width: 1024px) {
   .s_contact {
-    padding: 162px 141px;
-    display: flex;
+    padding-top: 114px;
+    padding-bottom: 0;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
   }
   .contact_detail {
     width: 50%;
+    .c_subtitle {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .c_title {
+      font-size: 33px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .c_address {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .c_address span {
+      margin-bottom: 6px;
+    }
+    .c_address p {
+    }
+    .c_list .c_item {
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 1px 0;
+    }
+    .c_list .c_item span {
+    }
+    .c_list .c_item span:nth-child(2) {
+    }
+  }
+
+  .contact_form {
+    width: 50%;
+    padding-top: 57px;
+
+    .c_input {
+      margin-bottom: 32px;
+      input,
+      textarea {
+        padding-top: 25px;
+        line-height: 19px;
+        border: none;
+      }
+      label {
+        font-size: 14px;
+      }
+      input:focus ~ label {
+        bottom: 46px;
+      }
+      textarea:focus ~ label {
+        bottom: 100%;
+      }
+      &:last-child {
+        margin-bottom: 95px;
+      }
+    }
+
+    .c_btn {
+      display: flex;
+      justify-content: flex-start;
+      button {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .s_contact {
+    padding-top: 162px;
+    padding-bottom: 0;
+  }
+  .contact_detail {
+    .c_subtitle {
+      font-size: 16px;
+      margin-bottom: 21px;
+    }
+    .c_title {
+      font-size: 39px;
+      margin-bottom: 36px;
+    }
+    .c_address {
+      font-size: 17px;
+      margin-bottom: 36px;
+    }
+    .c_address span {
+      margin-bottom: 8px;
+    }
+    .c_address p {
+    }
+    .c_list .c_item {
+      font-size: 17px;
+      margin: 5px 0;
+    }
+    .c_list .c_item span {
+    }
+    .c_list .c_item span:nth-child(2) {
+    }
+  }
+
+  .contact_form {
+    padding-top: 60px;
+
+    .c_input {
+      margin-bottom: 32px;
+      input,
+      textarea {
+        padding-top: 25px;
+        line-height: 19px;
+        border: none;
+      }
+      label {
+        font-size: 16px;
+      }
+      input:focus ~ label {
+        bottom: 46px;
+      }
+      textarea:focus ~ label {
+        bottom: 100%;
+      }
+      &:last-child {
+        margin-bottom: 95px;
+      }
+    }
+
+    .c_btn {
+      display: flex;
+      justify-content: flex-start;
+      button {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .s_contact {
+    padding-top: 162px;
+    padding-bottom: 0;
+  }
+  .contact_detail {
     .c_subtitle {
       font-size: 20px;
       line-height: 36px;
@@ -198,11 +345,5 @@
       button {
       }
     }
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .s_contact {
-    padding: 162px 180px;
   }
 }
