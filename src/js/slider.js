@@ -149,7 +149,7 @@ function initSecondarySlider() {
 
 function initTertiarySlider(slider) {
   const images = [...slider.querySelectorAll(".ts_images .tsi_item")];
-  const contents = [...slider.querySelectorAll(".ts_contents .tsc_item")];
+  // const contents = [...slider.querySelectorAll(".ts_contents .tsc_item")];
 
   const backButton = slider.querySelector(".tsbtn_prev");
   const forwardButton = slider.querySelector(".tsbtn_next");
@@ -195,11 +195,11 @@ function initTertiarySlider(slider) {
     let t,
       lastImage = slides[active],
       newImage = slides[newIndex],
-      c = newImage.querySelector("img"),
-      lastContent = contents[active],
-      newContent = contents[newIndex],
-      p = lastContent.querySelectorAll(".ts_stagger"),
-      D = newContent.querySelectorAll(".ts_stagger");
+      c = newImage.querySelector("img");
+    // lastContent = contents[active],
+    // newContent = contents[newIndex],
+    // p = lastContent.querySelectorAll(".ts_stagger"),
+    // D = newContent.querySelectorAll(".ts_stagger");
 
     t = forward ? [0, -100] : [0, 100];
 
@@ -211,16 +211,16 @@ function initTertiarySlider(slider) {
     });
 
     tweens
-      .set([newImage, newContent], {
+      .set(newImage, {
         autoAlpha: 1,
         zIndex: 2,
       })
-      .set([lastImage, lastContent], {
+      .set(lastImage, {
         autoAlpha: 1,
         zIndex: 3,
       })
       .fromTo(
-        [newImage],
+        newImage,
         {
           xPercent: t[0],
         },
@@ -244,44 +244,44 @@ function initTertiarySlider(slider) {
         },
         0
       )
-      .to(
-        p,
-        {
-          y: -30,
-          alpha: 0,
-          ease: "power1.in",
-          duration: 0.35,
-          stagger: 0.1,
-        },
-        0
-      )
-      .fromTo(
-        D,
-        {
-          y: 60,
-          rotation: 3,
-          alpha: 0,
-        },
-        {
-          duration: 1.1,
-          y: 0,
-          rotation: 0,
-          alpha: 1,
-          ease: "expo",
-          stagger: 0.1,
-        },
-        0.5
-      )
+      // .to(
+      //   p,
+      //   {
+      //     y: -30,
+      //     alpha: 0,
+      //     ease: "power1.in",
+      //     duration: 0.35,
+      //     stagger: 0.1,
+      //   },
+      //   0
+      // )
+      // .fromTo(
+      //   D,
+      //   {
+      //     y: 60,
+      //     rotation: 3,
+      //     alpha: 0,
+      //   },
+      //   {
+      //     duration: 1.1,
+      //     y: 0,
+      //     rotation: 0,
+      //     alpha: 1,
+      //     ease: "expo",
+      //     stagger: 0.1,
+      //   },
+      //   0.5
+      // )
       .set(lastImage, {
         autoAlpha: 0,
         clearProps: "zIndex, xPercent",
         zIndex: 2,
       })
-      .set(lastContent, {
-        autoAlpha: 0,
-        clearProps: "zIndex",
-      })
-      .set([newImage, newContent], {
+      // .set(lastContent, {
+      //   autoAlpha: 0,
+      //   clearProps: "zIndex",
+      // })
+      .set(newImage, {
         // clearProps: "zIndex",
         zIndex: 3,
       });
