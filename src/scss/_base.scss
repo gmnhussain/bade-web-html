@@ -1,14 +1,14 @@
 /*------- custom styles -------*/
 body {
-  font-family: "BegumSans", "Arial", sans-serif;
+  font-family: BegumSans, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
   line-height: 1.4;
-  letter-spacing: 0.05rem;
+  letter-spacing: 1px;
   color: var(--txt11);
   background-color: #fcf8f3;
-  background-color: #ffffff;
+  background-color: #fff;
   position: relative;
 }
 
@@ -28,10 +28,6 @@ body {
   height: auto;
 }
 
-// responsive
-@media only screen and (max-width: 576px) {
-}
-
 // page wrapper
 .page_wrapper {
 }
@@ -44,11 +40,25 @@ body {
 .page_ctn {
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 992px) {
   .page_width {
-    padding: 0 188px;
-    padding-left: 166px;
-    padding-right: 166px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page_width {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .page_width {
+    padding-left: 144px;
+    padding-right: 144px;
   }
 }
 
@@ -76,8 +86,8 @@ body {
 .btn_primary,
 .btn_primary_rev {
   display: block;
-  width: 229px;
-  height: 64px;
+  width: 230px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,16 +95,16 @@ body {
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   font-family: BegumSans;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 20px;
   color: #7b7564;
   text-transform: uppercase;
 }
 
 .btn_primary:hover,
 .btn_primary_rev {
-  background-color: #c2d5c1;
-  color: #ffffff;
-  border-color: #c2d5c1;
+  background-color: #a2c4a0;
+  color: #fff;
+  border-color: #a2c4a0;
 }
 
 .btn_primary_rev:hover {
