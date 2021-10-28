@@ -60,14 +60,34 @@
     background-color: rgba(0, 0, 0, 0.33);
   }
   .banner_title {
-    left: 183px;
+    left: 110px;
     width: auto;
     padding: 0;
     text-align: left;
   }
   .banner_title h2 {
-    font-size: 63px;
-    line-height: 89px;
+    font-size: 39px;
+    line-height: 1.6;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .banner_title {
+    left: 128px;
+  }
+  .banner_title h2 {
+    font-size: 44px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner_title {
+    left: 183px;
+  }
+  .banner_title h2 {
+    font-size: 63px;
+    line-height: 1.4;
   }
 }
