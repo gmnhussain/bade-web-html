@@ -83,12 +83,21 @@
   .s_grid_primary.detail_left .grid_ctn {
     flex-direction: row;
   }
+  .s_grid_primary.detail_right .grid_ctn {
+    flex-direction: row-reverse;
+  }
   .s_grid_primary .grid_detail {
     width: 66%;
     border-bottom: none;
     border-right: 1px solid #393939;
     padding-right: 52px;
     padding-top: 40px;
+  }
+  .s_grid_primary.detail_right .grid_detail {
+    border-right: none;
+    border-left: 1px solid #393939;
+    padding-right: 0;
+    padding-left: 52px;
   }
   .s_grid_primary .grid_summary {
     width: 34%;
@@ -143,6 +152,9 @@
     color: #393939;
     font-weight: 300;
     font-size: 16px;
+    margin-bottom: 22px;
+  }
+  .s_grid_primary .grid_summary .sum_list a {
     margin-bottom: 22px;
   }
 }

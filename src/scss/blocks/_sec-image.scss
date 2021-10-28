@@ -49,7 +49,6 @@
 
 @media screen and (min-width: 1024px) {
   .s_image_primary {
-    padding: 0 188px;
     justify-content: space-between;
     align-items: center;
   }
@@ -69,6 +68,10 @@
   // .s_image_primary .s_image_detail {
   //   padding-right: 40px;
   // }
+  .s_image_primary.img_top .s_image,
+  .s_image_primary.img_top .s_image_detail {
+    width: 100%;
+  }
   .s_image_primary .s_image_detail h1 {
     font-size: 53px;
     line-height: 78px;
