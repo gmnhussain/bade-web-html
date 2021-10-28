@@ -9,9 +9,6 @@
 .s_image_primary .s_image {
   width: 100%;
 }
-.s_image_primary .s_image picture {
-  width: 100%;
-}
 .s_image_primary .s_image img {
   width: 100%;
   object-fit: cover;
@@ -25,7 +22,7 @@
   font-family: BegumSans;
   font-size: 29px;
   font-weight: 400;
-  line-height: 42px;
+  line-height: 1.4;
   text-align: left;
   color: #7b7564;
   text-transform: uppercase;
@@ -35,16 +32,13 @@
   font-family: MartelSans;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.7;
   color: #32322f;
   text-align: left;
   margin-bottom: 25px;
 }
-.s_image_primary .s_image_detail p:last-child {
-}
-
 .s_image_primary .s_image_detail a {
-  margin-bottom: 53px;
+  margin-bottom: 47px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -60,17 +54,78 @@
   }
   .s_image_primary.img_top {
     flex-direction: column;
+    padding-bottom: 0;
   }
-  .s_image_primary .s_image,
+  .s_image_primary .s_image {
+    width: 50%;
+  }
   .s_image_primary .s_image_detail {
-    width: calc(50% - 50px);
+    width: 50%;
+    padding-right: 54px;
   }
-  // .s_image_primary .s_image_detail {
-  //   padding-right: 40px;
-  // }
+  .s_image_primary.img_left .s_image_detail {
+    padding-left: 54px;
+    padding-right: 0;
+  }
   .s_image_primary.img_top .s_image,
   .s_image_primary.img_top .s_image_detail {
     width: 100%;
+    margin-bottom: 50px;
+  }
+  .s_image_primary .s_image_detail h1 {
+    font-size: 31px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+  }
+  .s_image_primary .s_image_detail p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 27px;
+  }
+  .s_image_primary .s_image_detail a {
+    margin-bottom: 46px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .s_image_primary.img_top {
+    flex-direction: column;
+  }
+  .s_image_primary .s_image {
+    width: 50%;
+  }
+  .s_image_primary .s_image_detail {
+    width: 50%;
+    padding-right: 70px;
+  }
+  .s_image_primary.img_left .s_image_detail {
+    padding-left: 70px;
+  }
+
+  .s_image_primary .s_image_detail h1 {
+    font-size: 37px;
+    line-height: 1.5;
+    margin-bottom: 41px;
+  }
+  .s_image_primary .s_image_detail p {
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .s_image_primary.img_top {
+    flex-direction: column;
+  }
+  .s_image_primary .s_image {
+    width: 50%;
+  }
+  .s_image_primary .s_image_detail {
+    width: 50%;
+    padding-right: 100px;
+  }
+  .s_image_primary.img_left .s_image_detail {
+    padding-left: 100px;
   }
   .s_image_primary .s_image_detail h1 {
     font-size: 53px;
@@ -82,20 +137,12 @@
     line-height: 34px;
     margin-bottom: 46px;
   }
-  .s_image_primary .s_image_detail a {
-    margin-bottom: 46px;
-  }
 }
 
 // section image secondary
 .s_image_secondary {
-  padding: 0 15px 60px;
-  background-color: #f9f7f0;
+  padding-bottom: 60px;
 }
-.s_image_secondary:first-child {
-  /* margin-top: 60px; */
-}
-
 .s_image_secondary .s_image_ctn {
   display: flex;
   flex-direction: column;
@@ -105,9 +152,6 @@
 }
 
 .s_image_secondary .s_image {
-  width: 100%;
-}
-.s_image_secondary .s_image picture {
   width: 100%;
 }
 .s_image_secondary .s_image img {
@@ -125,7 +169,7 @@
   font-family: BegumSans;
   font-size: 29px;
   font-weight: 400;
-  line-height: 42px;
+  line-height: 1.4;
   color: #7b7564;
   text-transform: uppercase;
   margin-bottom: 35px;
@@ -134,7 +178,7 @@
   font-family: MartelSans;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.7;
   color: #32322f;
   margin-bottom: 21px;
 }
@@ -148,9 +192,9 @@
 
 @media screen and (min-width: 1280px) {
   .s_image_secondary {
-    padding-left: 48px;
-    padding-right: 48px;
-    padding-bottom: 300px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 232px;
   }
   .s_image_secondary .s_image_ctn {
     width: 100%;
@@ -165,8 +209,8 @@
   }
 
   .s_image_secondary .s_image {
-    width: 64%;
-    padding-top: 48%;
+    width: 79%;
+    padding-top: 49%;
     position: relative;
   }
   .s_image_secondary .s_image img {
@@ -177,11 +221,11 @@
     width: 100%;
   }
   .s_image_secondary .s_image_detail {
-    width: 68%;
-    padding: 110px 68px;
+    width: 48%;
+    padding: 58px 54px;
     z-index: 11;
-    top: 106px;
-    min-height: calc(100% - 38px);
+    top: 91px;
+    min-height: calc(100% - 34px);
     position: absolute;
     text-align: left;
   }
@@ -195,11 +239,8 @@
 
 @media screen and (min-width: 1600px) {
   .s_image_secondary {
-    padding-left: 134px;
-    padding-right: 96px;
     padding-bottom: 300px;
   }
-
   .s_image_secondary .s_image {
     width: 79%;
     padding-top: 0;
@@ -214,18 +255,14 @@
     width: 42%;
     padding: 108px 68px;
   }
-
   .s_image_secondary .s_image_detail h1 {
     font-size: 36px;
     line-height: 58px;
     margin-bottom: 42px;
   }
-
   .s_image_secondary .s_image_detail p {
     font-size: 18px;
     line-height: 34px;
     margin-bottom: 34px;
   }
 }
-
-// section image tertiary
