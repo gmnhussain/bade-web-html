@@ -1,9 +1,9 @@
 // text section primary
 .s_text_primary {
-  padding-top: 63px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 104px;
+  padding-top: 61px;
+  padding-bottom: 43px;
+  padding-left: 16px;
+  padding-right: 16px;
   text-align: center;
 }
 .s_text_primary p {
@@ -12,19 +12,43 @@
   font-family: BegumSans;
   font-size: 23px;
   font-weight: 400;
-  line-height: 31px;
+  line-height: 1.4;
   color: #32322f;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
 }
 
 @media screen and (min-width: 1024px) {
   .s_text_primary {
-    padding: 160px 40px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .s_text_primary p {
+    font-size: 26px;
+    text-align: center;
+    color: #393939;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .s_text_primary {
+    padding-top: 114px;
+    padding-bottom: 114px;
+  }
+  .s_text_primary p {
+    font-size: 31px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .s_text_primary {
+    padding-top: 160px;
+    padding-bottom: 160px;
   }
   .s_text_primary p {
     font-size: 45px;
-    line-height: 70px;
-    text-align: center;
-    color: #393939;
   }
 }
