@@ -30,6 +30,12 @@ function hidePreloader() {
 
 function initPreloader() {
   const preloader = document.querySelector("#preloader");
+
+  if (!preloader) {
+    setPageLoad();
+    return;
+  }
+
   const preBg = document.querySelector(".preloader-bg");
   const preLogo = document.querySelector(".preloader-logo");
 
