@@ -12,6 +12,10 @@ body {
   position: relative;
 }
 
+body.menu-on {
+  overflow: hidden;
+}
+
 // ::placeholder {
 //   color: rgba(0, 0, 0, 0.3);
 //   font-style: italic;

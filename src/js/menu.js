@@ -10,7 +10,7 @@ $("#menu_button, .mmenu_onbtn").on("click", function (e) {
   }
 });
 
-$(".mmb-on").on("click", function (e) {
+$(".mmb-on, .mmenu_offbtn").on("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
   if ($(".menu-on").length > 0) {
