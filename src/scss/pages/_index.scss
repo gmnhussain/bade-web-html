@@ -60,6 +60,69 @@
 // bornholm_med_page
 .bornholm_med_page {
 }
+.bornholm_med_page .s_banner_primary {
+  display: none;
+}
+.bornholm_med_page .s_image_primary {
+  flex-direction: column;
+}
+.bornholm_med_page .s_grid_primary .grid_detail {
+  border-bottom: none;
+}
+.bornholm_med_page .s_grid_primary .grid_summary .sum_list {
+  padding-top: 0;
+}
+.bornholm_med_page .s_image_primary {
+  padding-bottom: 0;
+}
+.bornholm_med_page .s_image_primary .s_image {
+  width: 100%;
+  margin-left: -34px;
+  margin-right: -34px;
+  width: calc(100% + 68px);
+  margin-top: -80px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .bornholm_med_page .s_banner_primary {
+    display: block;
+  }
+  .bornholm_med_page .s_image_primary {
+    flex-direction: column-reverse;
+  }
+  .bornholm_med_page .s_grid_primary .grid_detail {
+    border-bottom: 1px solid #393939;
+  }
+  .bornholm_med_page .s_grid_primary .grid_summary .sum_list {
+    padding-top: 37px;
+  }
+  .bornholm_med_page .s_image_primary {
+    padding-bottom: 0;
+  }
+  .bornholm_med_page .s_image_primary .s_image {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bornholm_med_page .s_image_primary {
+    flex-direction: column;
+  }
+  .bornholm_med_page .s_grid_primary .grid_detail {
+    border-bottom: none;
+  }
+  .bornholm_med_page .s_grid_primary .grid_summary .sum_list {
+    padding-top: 37px;
+  }
+  .bornholm_med_page .s_image_primary {
+    padding-bottom: 0;
+  }
+}
 
 // vaerelse_visning_page
 .vaerelse_visning_page {

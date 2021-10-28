@@ -71,6 +71,12 @@
   line-height: 1.6;
   margin-bottom: 16px;
 }
+.s_grid_primary .grid_summary .sum_list a {
+  padding-bottom: 22px;
+  padding-top: 22px;
+  border-top: 1px solid #f5ebe4;
+  border-bottom: 1px solid #f5ebe4;
+}
 
 @media screen and (min-width: 1024px) {
   .s_grid_primary {
@@ -111,6 +117,10 @@
   }
   .s_grid_primary.grid_summary_b .grid_summary {
     width: 44%;
+  }
+  .s_grid_primary.detail_right .grid_summary {
+    padding-right: 48px;
+    padding-left: 0;
   }
 
   .s_grid_primary .grid_detail .subtitle {
@@ -155,7 +165,7 @@
     margin-bottom: 22px;
   }
   .s_grid_primary .grid_summary .sum_list a {
-    margin-bottom: 22px;
+    border: none;
   }
 }
 
