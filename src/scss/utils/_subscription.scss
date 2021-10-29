@@ -197,8 +197,83 @@
     min-height: 100%;
     height: 100%;
     justify-content: center;
-    padding: 83px;
+    padding: 50px;
   }
+  .msubs_formtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .msubs_formtext {
+    font-size: 25px;
+    line-height: 1.6;
+    margin-bottom: 54px;
+  }
+  .msubs_input {
+    margin-bottom: 30px;
+  }
+  .msubs_input input {
+    font-size: 13px;
+    padding-top: 22px;
+  }
+  .msubs_input label {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .msubs_btn {
+    padding-top: 18px;
+  }
+  .msubs_btn button {
+    width: 240px;
+    height: 62px;
+    font-size: 17px;
+  }
+  .msubs_offbtn {
+    width: 25px;
+    height: 25px;
+    top: 28px;
+    right: 28px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .msubs_formtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+  }
+  .msubs_formtext {
+    font-size: 30px;
+    margin-bottom: 42px;
+  }
+  .msubs_input {
+    margin-bottom: 37px;
+  }
+  .msubs_input input {
+    font-size: 13px;
+    padding-top: 22px;
+  }
+  .msubs_input label {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .msubs_btn {
+    padding-top: 14px;
+  }
+  .msubs_btn button {
+    width: 224px;
+    height: 60px;
+    font-size: 17px;
+  }
+  .msubs_offbtn {
+    width: 28px;
+    height: 28px;
+    top: 28px;
+    right: 28px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .msubs_formtitle {
     font-size: 20px;
     line-height: 36px;
