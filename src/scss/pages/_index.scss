@@ -34,13 +34,13 @@
 }
 .vaerelser_page .tertiary_slider_wrapper {
   padding-top: 60px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #f9f7f0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+.vaerelser_page .page_width:last-child {
+  padding-bottom: 90px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -50,6 +50,9 @@
   .vaerelser_page .tertiary_slider_wrapper {
     padding-top: 182px;
     padding-bottom: 102px;
+  }
+  .vaerelser_page .page_width:last-child {
+    padding-bottom: 0;
   }
 }
 

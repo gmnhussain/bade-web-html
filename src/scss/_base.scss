@@ -77,6 +77,7 @@ body.menu-on {
 .scbtn_next {
 }
 .scbtn svg {
+  width: 54px;
 }
 .scbtn svg line {
   stroke: #c2d5c1;
@@ -84,6 +85,18 @@ body.menu-on {
 }
 .scbtn:hover svg line {
   stroke: #393939;
+}
+
+@media screen and (min-width: 1280px) {
+  .scbtn svg {
+    width: 64px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .scbtn svg {
+    width: 80px;
+  }
 }
 
 // buttons
