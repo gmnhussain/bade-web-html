@@ -15,7 +15,7 @@
 }
 .s_grid_primary .grid_detail .subtitle {
   font-family: MartelSans;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px;
   color: #393939;
   margin-bottom: 24px;
@@ -23,7 +23,7 @@
 }
 .s_grid_primary .grid_detail .title {
   font-family: BegumSans;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 29px;
   color: #7b7564;
   text-transform: uppercase;
@@ -125,7 +125,7 @@
 
   .s_grid_primary .grid_detail .subtitle {
     font-size: 16px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
   .s_grid_primary .grid_detail .title {
     color: #393939;
@@ -197,14 +197,14 @@
   }
 
   .s_grid_primary .grid_detail .subtitle {
-    font-size: 17px;
+    font-size: 15px;
   }
   .s_grid_primary .grid_detail .title {
     font-size: 37px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   .s_grid_primary .grid_detail p {
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 40px;
   }
   .s_grid_primary .grid_detail a.btn {
@@ -241,7 +241,7 @@
     width: 66%;
     border-bottom: none;
     border-right: 1px solid #393939;
-    padding-right: 84px;
+    //padding-right: 84px;
   }
   .s_grid_primary .grid_summary {
     width: 34%;
