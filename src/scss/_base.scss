@@ -228,3 +228,9 @@ body.menu-on {
 .bgcolor_s {
   background-color: #f5ebe4;
 }
+
+@media only screen and (max-width: 576px) {
+  .room_info {
+    padding: 0px 15px;
+  }
+}

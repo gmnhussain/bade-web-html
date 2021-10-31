@@ -30,7 +30,7 @@
 }
 .s_image_primary .s_image_detail p {
   font-family: MartelSans;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
   line-height: 1.7;
   color: #32322f;
@@ -92,11 +92,12 @@
     flex-direction: column;
   }
   .s_image_primary .s_image {
-    width: 50%;
+    width: 45%;
   }
   .s_image_primary .s_image_detail {
     width: 50%;
     padding-right: 70px;
+    padding-top: 30px;
   }
   .s_image_primary.img_left .s_image_detail {
     padding-left: 70px;
@@ -106,10 +107,13 @@
     font-size: 37px;
     line-height: 1.5;
     margin-bottom: 41px;
+    letter-spacing: 3.5px;
   }
   .s_image_primary .s_image_detail p {
-    font-size: 16px;
+    font-size: 13px;
     margin-bottom: 32px;
+    line-height: 1.8;
+    padding-right: 50px;
   }
 }
 

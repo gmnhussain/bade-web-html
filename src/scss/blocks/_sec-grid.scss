@@ -185,7 +185,7 @@
     width: 66%;
     border-bottom: none;
     border-right: 1px solid #393939;
-    padding-right: 84px;
+    padding-right: 50px;
   }
   .s_grid_primary .grid_summary {
     width: 34%;
@@ -206,6 +206,7 @@
   .s_grid_primary .grid_detail .title {
     font-size: 37px;
     margin-bottom: 35px;
+    letter-spacing: 3.5px;
   }
   .s_grid_primary .grid_detail p {
     font-size: 15px;
@@ -213,6 +214,7 @@
   }
   .s_grid_primary .grid_detail a.btn {
     margin-top: 20px;
+    letter-spacing: 2px;
   }
   .s_grid_primary a.btn_desktop {
     display: flex;
