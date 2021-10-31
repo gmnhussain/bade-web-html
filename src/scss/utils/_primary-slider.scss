@@ -43,8 +43,8 @@
 }
 .primary-slide {
   position: absolute;
-  transition: opacity 1.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  will-change: opacity;
+  transition: opacity 1.8s cubic-bezier(.445,.05,.55,.95), z-index 0s linear;
+  will-change: opacity, z-index;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -52,10 +52,13 @@
   pointer-events: none;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
 
 .primary-slide.active {
   opacity: 1;
+  pointer-events: all;
+  z-index: 3;
 }
 .primary-slide-bg {
   position: absolute;
@@ -113,25 +116,26 @@
   padding: 0;
 }
 .primary-slide-title {
-  margin-top: 275px;
+  margin-top: 260px;
   width: 100%;
   max-width: 375px;
   text-align: center;
-  margin-bottom: 58px;
+  margin-bottom: 50px;
 }
 .primary-slide-title h1 {
   font-family: "BegumSansRegularOtf";
-  font-size: 38px;
+  font-size: 32px;
   line-height: 49px;
   font-weight: 100;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: 3.5px;
 }
 
 // TODO: Temp sol.
 @media only screen and (max-width: 576px) {
   .primary-slide-title h1 {
-    padding: 0px 10px;
+    padding: 0px 15px;
   }
 }
 
@@ -148,12 +152,12 @@
 .primary-slide-links a {
   transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   width: 225px;
-  height: 50px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: BegumSans;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 29px;
   font-weight: 400;
   text-transform: uppercase;
@@ -161,10 +165,6 @@
   pointer-events: all;
   border: 1px solid #fff;
   color: #fff;
-}
-.primary-slide-links a:hover {
-  background-color: #fff;
-  color: #32322f;
 }
 
 .primary-dots {
@@ -251,12 +251,19 @@
     align-items: center;
   }
   .primary-slide-links a {
-    width: 235px;
-    height: 45px;
-    font-size: 16px;
+    width: 173px;
+    height: 43px;
+    font-size: 14px;
     line-height: 40px;
     margin-bottom: 0;
-    margin-right: 43px;
+    margin-right: 15px;
+  }
+  .primary-slide-links a:hover {
+    background-color: #a2c4a0;
+    border-color: #a2c4a0;
+  }
+  .primary-slide-links a:nth-child(2) {
+    width: 210px;
   }
   .primary-dots {
     margin: 15px 0;
@@ -311,11 +318,11 @@
 
 @media screen and (min-width: 992px) {
   .pslide_logo {
-    left: 85px;
+    left: 86px;
     transform: translateX(0);
   }
   .pslide_logo a img {
-    width: 210px;
+    width: 200px;
   }
 }
 
@@ -364,7 +371,7 @@
 
 @media only screen and (min-width: 992px) {
   .primary-slide-content {
-    padding-left: 155px;
+    padding-left: 152px;
     padding-right: 170px;
     max-width: 1000px;
   }
@@ -372,24 +379,27 @@
     display: block;
     width: 100%;
     font-family: MartelSans;
-    font-size: 15px;
+    font-size: .9rem;
     font-weight: 200;
     color: #fff;
     margin-bottom: 50px;
     overflow: hidden;
     padding-right: 60px;
+    line-height: 1.6;
+    letter-spacing: .5px;
   }
   .primary-slide-title h1 {
     font-size: 44px;
     line-height: 1.4;
-    padding-right: 90px;
+    padding-right: 170px;
+    letter-spacing: 3.5px;
   }
   .primary-slide-title {
-    margin-top: 250px;
+    margin-top: 256px;
     max-width: calc(400px + 250 * (100vw - 1280px) / 640);
     width: 100%;
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
     max-width: 100%;
   }
 }
