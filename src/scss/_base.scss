@@ -103,8 +103,8 @@ body.menu-on {
 .btn_primary,
 .btn_primary_rev {
   display: block;
-  width: 230px;
-  height: 70px;
+  width: 180px;
+  height: 62px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +112,7 @@ body.menu-on {
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   font-family: BegumSans;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   color: #7b7564;
   text-transform: uppercase;
 }
@@ -134,7 +134,7 @@ body.menu-on {
   .btn_primary {
     width: 320px;
     height: 75px;
-    font-size: 21px;
+    font-size: 17px;
   }
 }
 

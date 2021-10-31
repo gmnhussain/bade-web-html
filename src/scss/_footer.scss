@@ -14,10 +14,10 @@
 .footer_text p {
   font-family: MartelSans;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   color: #7b7564;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .footer_text h2 {
   font-family: BegumSans;
@@ -90,7 +90,7 @@
 }
 .footer_address_left p {
   font-family: MartelSans;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   color: #32322f;
   text-align: left;
@@ -141,12 +141,13 @@
     justify-content: flex-end;
     width: 100%;
     margin: 0 -16px;
+    padding-bottom: 95px;
   }
   .footer_instagram a {
     display: block;
     padding: 0 16px;
     margin: 0;
-    width: 230px;
+    width: 250px;
   }
   .footer_instagram a img {
     height: 102%;
@@ -163,8 +164,8 @@
     flex-direction: column;
   }
   .footer_text p {
-    font-size: 16px;
-    color: #c2d5c1;
+    font-size: 14px;
+    color: #7b7564;
   }
   .footer_text h2 {
     font-size: 25px;
@@ -182,11 +183,11 @@
     padding-bottom: 20px;
   }
   .footer_social_links a {
-    margin-right: 34px;
+    margin-right: 25px;
   }
   .footer_social_links a svg {
-    width: 42px;
-    height: 42px;
+    width: 32px;
+    height: 32px;
   }
 
   .footer_instagram {
@@ -206,7 +207,7 @@
     display: block;
     padding: 0 16px;
     margin: 0;
-    width: 230px;
+    width: 250px;
   }
   .footer_instagram a img {
     height: 102%;
@@ -225,7 +226,7 @@
   }
   .footer_address_left h2 {
     font-size: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 10px;
   }
   .footer_address_left p {
     font-size: 16px;
@@ -247,15 +248,15 @@
   }
   .footer_btn a {
     display: flex;
-    width: 300px;
-    height: 73px;
+    width: 260px;
+    height: 65px;
     justify-content: center;
     align-items: center;
-    background-color: #c2d5c1;
+    background-color: #A2C4A0;
     color: #fff;
     font-family: BegumSans;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .footer_links {
@@ -266,7 +267,7 @@
   .footer_links a,
   .footer_links p {
     font-family: MartelSans;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     color: #32322f;
     margin-left: 18px;
@@ -301,7 +302,7 @@
   }
   .footer_text p {
     font-size: 16px;
-    color: #c2d5c1;
+    color: #7b7564;
     font-size: 20px;
   }
   .footer_text h2 {
@@ -340,6 +341,7 @@
     justify-content: flex-end;
     width: 100%;
     margin: 0 -16px;
+    padding-bottom: 95px;
   }
   .footer_instagram a {
     display: block;

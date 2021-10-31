@@ -96,7 +96,7 @@
 
 @media screen and (min-width: 1280px) {
   .banner_back_btn {
-    right: 90px;
+    right: 80px;
     top: 90px;
   }
 }
@@ -140,9 +140,9 @@
   will-change: opacity, transform;
 }
 .menu_button .mbinner-text {
-  font-family: BegumSans;
-  font-size: 19px;
-  font-weight: 400;
+  font-family: BegumSansRegularOtf;
+  font-size: 14px;
+  font-weight: 100;
   line-height: 23px;
   color: #ffffff;
   text-transform: uppercase;
@@ -271,7 +271,7 @@
 }
 .banner_logo {
   position: absolute;
-  top: 44px;
+  top: 70px;
   left: 40px;
   z-index: 11;
   opacity: 0;
@@ -295,7 +295,7 @@
 @media screen and (min-width: 992px) {
   .banner_nav {
     z-index: 1;
-    right: 115px;
+    right: 100px;
     top: 0;
     height: 100%;
     display: flex;
@@ -341,8 +341,8 @@
   }
 
   .banner_logo {
-    top: 90px;
-    left: 90px;
+    top: 60px;
+    left: 85px;
   }
   .banner_logo a img {
     width: 180px;
@@ -368,7 +368,7 @@
     transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     width: 100%;
     height: 100%;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     font-family: BegumSans;
     font-size: 15px;
     font-weight: 400;
@@ -389,16 +389,16 @@
 
 @media screen and (min-width: 1280px) {
   .banner_logo a img {
-    width: 220px;
+    width: 210px;
   }
   .banner_btn {
-    width: 224px;
-    height: 68px;
-    top: 100px;
+    width: 190px;
+    height: 55px;
+    top: 75px;
     right: 206px;
   }
   .banner_btn a {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 

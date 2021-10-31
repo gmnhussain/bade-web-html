@@ -15,7 +15,7 @@
 }
 .s_grid_primary .grid_detail .subtitle {
   font-family: MartelSans;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px;
   color: #393939;
   margin-bottom: 24px;
@@ -23,8 +23,8 @@
 }
 .s_grid_primary .grid_detail .title {
   font-family: BegumSans;
-  font-weight: 400;
-  font-size: 29px;
+  font-weight: 200;
+  font-size: 27px;
   color: #7b7564;
   text-transform: uppercase;
   margin-bottom: 32px;
@@ -46,6 +46,10 @@
   width: 100%;
   max-width: 311px;
   margin: 0 auto;
+  font-size: 20px;
+  background-color: #a2c4a0;
+  color: #fff;
+  border-color: #a2c4a0;
 }
 
 .s_grid_primary .grid_summary {
@@ -66,7 +70,7 @@
 .s_grid_primary .grid_summary .sum_list p {
   font-family: MartelSans;
   font-weight: 200;
-  font-size: 19px;
+  font-size: 18px;
   color: #32322f;
   line-height: 1.6;
   margin-bottom: 16px;
@@ -125,7 +129,7 @@
 
   .s_grid_primary .grid_detail .subtitle {
     font-size: 16px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
   .s_grid_primary .grid_detail .title {
     color: #393939;
@@ -197,14 +201,14 @@
   }
 
   .s_grid_primary .grid_detail .subtitle {
-    font-size: 17px;
+    font-size: 15px;
   }
   .s_grid_primary .grid_detail .title {
     font-size: 37px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   .s_grid_primary .grid_detail p {
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 40px;
   }
   .s_grid_primary .grid_detail a.btn {
@@ -241,7 +245,7 @@
     width: 66%;
     border-bottom: none;
     border-right: 1px solid #393939;
-    padding-right: 84px;
+    //padding-right: 84px;
   }
   .s_grid_primary .grid_summary {
     width: 34%;
