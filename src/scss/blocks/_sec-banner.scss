@@ -55,6 +55,27 @@
   text-transform: uppercase;
 }
 
+a.banner_next_page_link {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  transform: translateY(50%);
+  background-color: #f5ebe4;
+  border-radius: 50%;
+}
+a.banner_next_page_link svg {
+}
+@media screen and (min-width: 768px) {
+  a.banner_next_page_link {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .banner_bg::after {
     background-color: rgba(0, 0, 0, 0.33);

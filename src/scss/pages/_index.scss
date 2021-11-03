@@ -85,6 +85,10 @@
   width: calc(100% + 68px);
   margin-top: -80px;
   margin-bottom: 40px;
+  position: relative;
+}
+.bornholm_med_page .s_grid_primary .grid_detail {
+  border-color: rgba(112, 112, 112, 0.56);
 }
 
 @media screen and (min-width: 768px) {
@@ -95,7 +99,7 @@
     flex-direction: column-reverse;
   }
   .bornholm_med_page .s_grid_primary .grid_detail {
-    border-bottom: 1px solid #393939;
+    // border-bottom: 1px solid #393939;
   }
   .bornholm_med_page .s_grid_primary .grid_summary .sum_list {
     padding-top: 37px;
@@ -120,10 +124,27 @@
     border-bottom: none;
   }
   .bornholm_med_page .s_grid_primary .grid_summary .sum_list {
-    padding-top: 37px;
+    padding-top: 0;
   }
   .bornholm_med_page .s_image_primary {
     padding-bottom: 0;
+  }
+  .bornholm_med_page .s_grid_primary.detail_right .grid_detail {
+    padding-left: 82px;
+    padding-top: 0;
+  }
+  .bornholm_med_page .s_grid_primary.detail_right .grid_summary {
+    padding-top: 0;
+  }
+  .bornholm_med_page .s_image_primary .s_image_detail h3,
+  .bornholm_med_page .s_image_primary .s_image_detail h1 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .bornholm_med_page .s_grid_primary.detail_right .grid_detail {
+    padding-left: 100px;
   }
 }
 

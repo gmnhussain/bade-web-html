@@ -150,8 +150,11 @@ body.menu-on {
   transition: color 0.6s cubic-bezier(0.47, 0, 0.745, 0.715),
     padding-left 0.5s cubic-bezier(0.4, -0.22, 0.46, 1);
 }
+.link_r.active {
+  color: #32322f;
+}
 .link_r:hover {
-  padding-left: 20px;
+  padding-left: 20px !important;
   color: #7b7564;
 }
 .link_r::before {
@@ -191,7 +194,7 @@ body.menu-on {
 
 @media screen and (min-width: 1280px) {
   .link_r {
-    font-size: 17px;
+    font-size: 22px;
   }
   .link_r:hover {
     padding-left: 20px;
