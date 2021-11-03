@@ -251,7 +251,7 @@
     align-items: center;
   }
   .primary-slide-links a {
-    width: 173px;
+    width: 223px;
     height: 43px;
     font-size: 14px;
     line-height: 40px;
@@ -261,9 +261,6 @@
   .primary-slide-links a:hover {
     background-color: #a2c4a0;
     border-color: #a2c4a0;
-  }
-  .primary-slide-links a:nth-child(2) {
-    width: 210px;
   }
   .primary-dots {
     margin: 15px 0;
@@ -293,7 +290,7 @@
     width: auto;
     text-align: right;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 2px;
     font-family: "BegumSans";
     pointer-events: none;

@@ -10,11 +10,12 @@
   max-width: 1308px;
   margin: 0 auto;
   font-family: BegumSans;
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #32322f;
   margin-bottom: 35px;
+  letter-spacing: 0.6px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -40,7 +41,7 @@
   .s_text_primary p {
     font-size: 31px;
     line-height: 1.5;
-    padding: 0px 50px;
+    padding: 0px 90px;
   }
 }
 

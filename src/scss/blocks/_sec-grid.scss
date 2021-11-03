@@ -24,19 +24,22 @@
 .s_grid_primary .grid_detail .title {
   font-family: BegumSans;
   font-weight: 200;
-  font-size: 27px;
+  font-size: 28px;
   color: #7b7564;
   text-transform: uppercase;
   margin-bottom: 32px;
   line-height: 1.5;
+  letter-spacing: 1.8px;
+  margin-right: 10px;
 }
 .s_grid_primary .grid_detail p {
   font-family: MartelSans;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
   line-height: 1.7;
   color: #32322f;
-  margin-bottom: 37px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
 }
 .s_grid_primary a.btn_desktop {
   display: none;
@@ -72,20 +75,22 @@
   font-weight: 200;
   font-size: 18px;
   color: #32322f;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 16px;
 }
 .s_grid_primary .grid_summary .sum_list a {
-  padding-bottom: 22px;
-  padding-top: 22px;
-  border-top: 1px solid #f5ebe4;
+  padding-bottom: 25px;
+  padding-top: 25px;
   border-bottom: 1px solid #f5ebe4;
+}
+.s_grid_primary .grid_summary .sum_list a:first-child {
+  border-top: 1px solid #f5ebe4;
 }
 
 @media screen and (min-width: 1024px) {
   .s_grid_primary {
     padding-top: 98px;
-    padding-bottom: 110px;
+    padding-bottom: 70px;
   }
   .s_grid_primary .grid_ctn {
     flex-direction: row;
@@ -164,12 +169,15 @@
   }
   .s_grid_primary .grid_summary .sum_list p {
     color: #393939;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 16px;
     margin-bottom: 22px;
   }
-  .s_grid_primary .grid_summary .sum_list a {
+  .s_grid_primary .grid_summary .sum_list a,
+  .s_grid_primary .grid_summary .sum_list a:first-child {
     border: none;
+    padding: 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -189,7 +197,7 @@
   }
   .s_grid_primary .grid_summary {
     width: 34%;
-    padding: 30px 57px;
+    padding: 35px 57px;
     display: flex;
     flex-direction: row;
   }
@@ -205,12 +213,15 @@
   }
   .s_grid_primary .grid_detail .title {
     font-size: 37px;
-    margin-bottom: 35px;
-    letter-spacing: 3.5px;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+    padding-right: 70px;
   }
   .s_grid_primary .grid_detail p {
     font-size: 15px;
     margin-bottom: 40px;
+    letter-spacing: 0.5px;
+    padding-right: 70px;
   }
   .s_grid_primary .grid_detail a.btn {
     margin-top: 20px;
@@ -227,10 +238,10 @@
     border-bottom: none;
   }
   .s_grid_primary.grid_summary_b .grid_summary .sum_list:nth-child(1) {
-    margin-right: 32px;
+    margin-right: 45px;
   }
   .s_grid_primary .grid_summary .sum_list p {
-    font-size: 22px;
+    font-size: 21px;
     margin-bottom: 22px;
   }
 }
@@ -295,5 +306,9 @@
     font-weight: 300;
     font-size: 32px;
     margin-bottom: 28px;
+  }
+  .s_grid_primary .grid_summary .sum_list a,
+  .s_grid_primary .grid_summary .sum_list a:first-child {
+    margin-bottom: 42px;
   }
 }

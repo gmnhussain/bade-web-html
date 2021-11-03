@@ -47,12 +47,34 @@
 }
 .banner_title h2 {
   font-family: BegumSans;
-  font-size: 37px;
-  font-weight: 400;
+  font-size: 35px;
+  font-weight: 300;
   line-height: 51px;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
+  letter-spacing: 1.9px;
+}
+
+a.banner_next_page_link {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  transform: translateY(50%);
+  background-color: #f5ebe4;
+  border-radius: 50%;
+}
+a.banner_next_page_link svg {
+}
+@media screen and (min-width: 768px) {
+  a.banner_next_page_link {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
