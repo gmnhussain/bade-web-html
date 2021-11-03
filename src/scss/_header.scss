@@ -277,6 +277,9 @@
   transition: opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.7s;
 }
+.banner_logo.view_desktop {
+  display: none;
+}
 .loaded .banner_logo {
   opacity: 1;
 }
@@ -337,6 +340,10 @@
   .loaded .banner_line.full::before {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+
+  .banner_logo.view_desktop {
+    display: block;
   }
 
   .banner_logo {
