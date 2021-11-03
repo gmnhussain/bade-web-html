@@ -76,16 +76,18 @@
   margin-bottom: 16px;
 }
 .s_grid_primary .grid_summary .sum_list a {
-  padding-bottom: 22px;
-  padding-top: 22px;
-  border-top: 1px solid #f5ebe4;
+  padding-bottom: 25px;
+  padding-top: 25px;
   border-bottom: 1px solid #f5ebe4;
+}
+.s_grid_primary .grid_summary .sum_list a:first-child {
+  border-top: 1px solid #f5ebe4;
 }
 
 @media screen and (min-width: 1024px) {
   .s_grid_primary {
     padding-top: 98px;
-    padding-bottom: 110px;
+    padding-bottom: 70px;
   }
   .s_grid_primary .grid_ctn {
     flex-direction: row;
@@ -168,8 +170,11 @@
     font-size: 16px;
     margin-bottom: 22px;
   }
-  .s_grid_primary .grid_summary .sum_list a {
+  .s_grid_primary .grid_summary .sum_list a,
+  .s_grid_primary .grid_summary .sum_list a:first-child {
     border: none;
+    padding: 0;
+    margin-bottom: 35px;
   }
 }
 
@@ -295,5 +300,9 @@
     font-weight: 300;
     font-size: 32px;
     margin-bottom: 28px;
+  }
+  .s_grid_primary .grid_summary .sum_list a,
+  .s_grid_primary .grid_summary .sum_list a:first-child {
+    margin-bottom: 42px;
   }
 }
