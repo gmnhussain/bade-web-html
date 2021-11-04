@@ -16,11 +16,6 @@ function initPrimarySlider() {
     dots.forEach((dot, index) => {
       dot.addEventListener("click", (e) => {
         if (!isAnimating) {
-          dots[currentSlide].className = dots[currentSlide].className.replace(
-            " active",
-            ""
-          );
-          dot.className += " active";
           showSlides(currentSlide, index);
         }
       });
@@ -53,6 +48,12 @@ function initPrimarySlider() {
     slides[currSlide].classList.add("btm--out");
     slides[newSlide].classList.add("active", "btm--in");
 
+    dots[currentSlide].className = dots[currentSlide].className.replace(
+      " active",
+      ""
+    );
+    dots[newSlide].className += " active";
+
     setTimeout(() => {
       slides[currSlide].classList.remove("btm--out");
       currentSlide = newSlide;
@@ -60,7 +61,38 @@ function initPrimarySlider() {
     }, delayTimer);
   }
 
-  function shiftSlides(direction) {}
+  function shiftSlides(direction) {
+    let newSlide;
+    if (direction == 1 && currentSlide < slides.length - 1) {
+      newSlide = currentSlide + 1;
+    } else if (direction == -1 && currentSlide > 0) {
+      newSlide = currentSlide - 1;
+    } else {
+      return;
+    }
+    showSlides(currentSlide, newSlide);
+  }
+
+  window.addEventListener("wheel", (event) => {
+    if (event.deltaY != 0) {
+      const delta = Math.sign(event.deltaY);
+      // console.info(delta);
+
+      // 1 is scrolldown, -1 is scroll up
+
+      if (!isAnimating) {
+        isAnimating = true;
+        shiftSlides(delta);
+
+        //set timer
+        setTimeout(function () {
+          isAnimating = false;
+        }, 3000);
+      }
+    } else {
+      event.preventDefault();
+    }
+  });
 }
 
 // initSlider();
