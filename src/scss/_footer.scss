@@ -104,17 +104,33 @@
 }
 
 .footer_address_right {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .footer_btn {
+  margin-bottom: 50px;
 }
 .footer_btn a {
+  display: flex;
+  width: 270px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  background-color: #a2c4a0;
+  color: #fff;
+  font-family: BegumSans;
+  font-weight: 400;
+  font-size: 16px;
 }
 .footer_links {
 }
 .footer_links a,
 .footer_links p {
+  margin-bottom: 25px;
+  display: inline-block;
 }
 .footer_links p {
 }
@@ -254,7 +270,7 @@
     height: 65px;
     justify-content: center;
     align-items: center;
-    background-color: #A2C4A0;
+    background-color: #a2c4a0;
     color: #fff;
     font-family: BegumSans;
     font-weight: 400;
