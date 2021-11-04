@@ -2,10 +2,16 @@
 .oplev_page {
 }
 .oplev_page .page_width:last-child .s_image_secondary {
-  padding-bottom: calc(30px + 1.33vw);
+  padding-bottom: 0;
 }
 .oplev_page .s_text_primary {
   padding-bottom: calc(94px + 1.33vw);
+}
+
+@media screen and (min-width: 992px) {
+  .oplev_page .page_width:last-child .s_image_secondary {
+    padding-bottom: calc(30px + 2vw);
+  }
 }
 
 // badehotellet_page
