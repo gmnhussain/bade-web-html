@@ -30,18 +30,19 @@
 }
 .s_image_primary .s_image_detail h1 {
   font-family: BegumSans;
-  font-size: 29px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 300;
   line-height: 1.4;
   text-align: left;
   color: #7b7564;
   text-transform: uppercase;
   margin-bottom: 42px;
+  letter-spacing: 2px;
 }
 .s_image_primary .s_image_detail p {
   font-family: MartelSans;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
   color: #32322f;
   text-align: left;
@@ -118,13 +119,13 @@
   }
 
   .s_image_primary .s_image_detail h1 {
-    font-size: 37px;
+    font-size: 39px;
     line-height: 1.5;
     margin-bottom: 41px;
     letter-spacing: 3.5px;
   }
   .s_image_primary .s_image_detail p {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 32px;
     line-height: 1.8;
     padding-right: 50px;
@@ -187,23 +188,41 @@
   padding: 32px;
   background-color: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .s_image_secondary .s_image_detail h1 {
   font-family: BegumSans;
   font-size: 29px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.7;
   color: #7b7564;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
+  letter-spacing: 1.5px;
 }
 .s_image_secondary .s_image_detail p {
   font-family: MartelSans;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.9;
   color: #32322f;
   margin-bottom: 21px;
+}
+.s_image_secondary .s_image_detail a {
+  width: 226px;
+  height: 63px;
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .s_image_secondary .s_image_detail {
+    width: 100%;
+    padding: 44px 44px;
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -244,7 +263,7 @@
     width: 100%;
   }
   .s_image_secondary .s_image_detail {
-    width: 48%;
+    width: 44%;
     padding: 58px 54px;
     z-index: 11;
     top: 91px;
@@ -287,5 +306,9 @@
     font-size: 18px;
     line-height: 34px;
     margin-bottom: 34px;
+  }
+  .s_image_secondary .s_image_detail a {
+    width: 250px;
+    height: 74px;
   }
 }

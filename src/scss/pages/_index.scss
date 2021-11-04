@@ -1,6 +1,12 @@
 // oplev_page
 .oplev_page {
 }
+.oplev_page .page_width:last-child .s_image_secondary {
+  padding-bottom: calc(30px + 1.33vw);
+}
+.oplev_page .s_text_primary {
+  padding-bottom: calc(94px + 1.33vw);
+}
 
 // badehotellet_page
 .badehotellet_page {
@@ -20,6 +26,7 @@
   background-color: #f9f7f0;
   position: relative;
 }
+
 @media screen and (min-width: 768px) {
   .badehotellet_page .secondary_slider {
     margin-bottom: -218px;
