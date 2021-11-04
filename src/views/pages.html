@@ -25,22 +25,41 @@
       padding: 50px;
     }
 
-    .content h2 {
+    .title {
       text-align: left;
       margin-bottom: 30px;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .links_wrap {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
+
+    .link_layout {
+      width: 100px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
     }
 
     .links {
-      padding: 0 50px;
+      padding: 0;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
 
     .links a {
       display: flex;
       align-items: center;
       justify-items: flex-start;
-      padding: 6px 0;
+      padding: 0;
+      margin-bottom: 12px;
     }
 
     .links a:hover {
@@ -51,16 +70,63 @@
 
 <body>
   <div class="content">
-    <h2>All Links</h2>
-    <div class="links">
-      <a href="/" target="_blank">Homepage</a>
-      <a href="badehotellet.html" target="_blank">badehotellet.html</a>
-      <a href="oplev-bornholm.html" target="_blank">oplev-bornholm.html</a>
-      <a href="kontakt.html" target="_blank">kontakt.html</a>
-      <a href="alle-vaerelser.html" target="_blank">alle-vaerelser.html</a>
-      <a href="vaerelse-visning.html" target="_blank">vaerelse-visning.html</a>
-      <a href="bornholm-med-bil.html" target="_blank">bornholm-med-bil.html</a>
-      <a href="midtugeophold.html" target="_blank">midtugeophold.html</a>
+    <h2 class="title">All Links</h2>
+
+    <div class="links_wrap">
+      <div class="link_layout">Layout 1</div>
+      <div class="links">
+        <a href="/" target="_blank">Homepage</a>
+      </div>
+    </div>
+
+    <div class="links_wrap">
+      <div class="link_layout">Layout 2</div>
+      <div class="links">
+        <a href="badehotellet.html" target="_blank">badehotellet.html</a>
+      </div>
+    </div>
+
+    <div class="links_wrap">
+      <div class="link_layout">Layout 3</div>
+      <div class="links">
+        <a href="oplev-bornholm.html" target="_blank">oplev-bornholm.html</a>
+        <a href="ophold-kampagner.html" target="_blank">ophold-kampagner.html</a>
+      </div>
+    </div>
+
+    <div class="links_wrap">
+      <div class="link_layout">Layout 4</div>
+      <div class="links">
+        <a href="kontakt.html" target="_blank">kontakt.html</a>
+      </div>
+    </div>
+
+    <div class="links_wrap">
+      <div class="link_layout">Layout 5</div>
+      <div class="links">
+        <a href="alle-vaerelser.html" target="_blank">alle-vaerelser.html</a>
+      </div>
+    </div>
+
+    <div class="links_wrap">
+      <div class="link_layout">Layout 6</div>
+      <div class="links">
+        <a href="vaerelse-visning.html" target="_blank">vaerelse-visning.html</a>
+      </div>
+    </div>
+
+    <div class="links_wrap">
+      <div class="link_layout">Layout 7</div>
+      <div class="links">
+        <a href="bornholm-med-bil.html" target="_blank">bornholm-med-bil.html</a>
+      </div>
+    </div>
+
+    <div class="links_wrap">
+      <div class="link_layout">Layout 8</div>
+      <div class="links">
+        <a href="midtugeophold.html" target="_blank">midtugeophold.html</a>
+      </div>
     </div>
   </div>
 </body>
