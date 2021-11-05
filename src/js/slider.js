@@ -1,102 +1,3 @@
-function initPrimarySlider() {
-  let slides, dots, currentSlide, previousSlide;
-  let isAnimating = false;
-  let delayTimer = 3000;
-
-  const hasSlider = document.querySelectorAll(".primary-slider").length;
-
-  if (hasSlider) {
-    slides = document.querySelectorAll(".primary-slide");
-    dots = document.querySelectorAll(".primary-dot");
-    currentSlide = 0;
-    previousSlide = 0;
-
-    sliderStartUp();
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener("click", (e) => {
-        if (!isAnimating) {
-          showSlides(currentSlide, index);
-        }
-      });
-    });
-  }
-
-  function sliderStartUp() {
-    slides[0].classList.add(
-      // "btm--in",
-      // "is--animating",
-      // "ani--in",
-      "active"
-    );
-    dots[0].classList.add("active");
-
-    setTimeout(function () {
-      slides[0].classList.add("btm--in");
-    }, 6000);
-  }
-
-  function showSlides(currSlide, newSlide) {
-    isAnimating = true;
-    // slides[currSlide].className = slides[currSlide].className.replace(
-    //   " active btm--in",
-    //   ""
-    // );
-    // slides[newSlide].className += " active btm--in";
-    // slides[prevSlide].classList.remove("btm--out");
-    slides[currSlide].classList.remove("active", "btm--in");
-    slides[currSlide].classList.add("btm--out");
-    slides[newSlide].classList.add("active", "btm--in");
-
-    dots[currentSlide].className = dots[currentSlide].className.replace(
-      " active",
-      ""
-    );
-    dots[newSlide].className += " active";
-
-    setTimeout(() => {
-      slides[currSlide].classList.remove("btm--out");
-      currentSlide = newSlide;
-      isAnimating = false;
-    }, delayTimer);
-  }
-
-  function shiftSlides(direction) {
-    let newSlide;
-    if (direction == 1 && currentSlide < slides.length - 1) {
-      newSlide = currentSlide + 1;
-    } else if (direction == -1 && currentSlide > 0) {
-      newSlide = currentSlide - 1;
-    } else {
-      return;
-    }
-    showSlides(currentSlide, newSlide);
-  }
-
-  window.addEventListener("wheel", (event) => {
-    if (event.deltaY != 0) {
-      const delta = Math.sign(event.deltaY);
-      // console.info(delta);
-
-      // 1 is scrolldown, -1 is scroll up
-
-      if (!isAnimating) {
-        isAnimating = true;
-        shiftSlides(delta);
-
-        //set timer
-        setTimeout(function () {
-          isAnimating = false;
-        }, 3000);
-      }
-    } else {
-      event.preventDefault();
-    }
-  });
-}
-
-// initSlider();
-
 function initSecondarySlider() {
   let slides, dots, currentSlide;
   let isAnimating = false;
@@ -360,3 +261,231 @@ const vwidthSlider = new Swiper(".vwidth_slider", {
     },
   },
 });
+
+function initPrimarySlider() {
+  let slides, dots, currentSlide, bgbase;
+  let isAnimating = false;
+  let delaytimer = 3000; // 1.7 secs
+
+  function init() {
+    let hasSlider = document.querySelectorAll(".primary-slides").length;
+
+    bgbase = document.querySelector(".primary-slider-bg");
+
+    if (hasSlider >= 1) {
+      slides = document.querySelectorAll(".primary-slides .primary-slide");
+      dots = document.querySelectorAll(".primary-dot");
+      currentSlide = 1;
+
+      // if ($("body").hasClass("loaded")) {
+      //   startUp();
+      // }
+      setTimeout(() => {
+        startUp();
+      }, 7000);
+
+      window.addEventListener("wheel", wheelEvent);
+      document.addEventListener("keyup", keyUpEvent);
+      dotClickEvent();
+    }
+  }
+
+  function startUp() {
+    slides[0].classList.add("btm--in", "is--animating", "ani--in");
+  }
+
+  //interaction
+  function dotClickEvent() {
+    for (let i = 1; i <= dots.length; i++) {
+      //remove classes
+      dots[i - 1].addEventListener(
+        "click",
+        function (i) {
+          if (!isAnimating && i != currentSlide) {
+            isAnimating = true;
+
+            animateSlides(currentSlide, i);
+            //set timer
+            setTimeout(function () {
+              isAnimating = false;
+            }, delaytimer);
+          }
+        }.bind(null, i)
+      );
+    }
+  }
+
+  function keyUpEvent(event) {
+    switch (event.keyCode) {
+      case 38:
+        //up
+        shiftSlides(-1);
+        break;
+      case 40:
+        //down
+        shiftSlides(1);
+        break;
+      case 37:
+        //left
+        shiftSlides(-1);
+        break;
+      case 39:
+        //right
+        shiftSlides(1);
+        break;
+    }
+  }
+
+  function wheelEvent(event) {
+    if (event.deltaY != 0) {
+      let delta = Math.sign(event.deltaY);
+      // 1 is scrolldown, -1 is scroll up
+      if (!isAnimating) {
+        isAnimating = true;
+        shiftSlides(delta);
+
+        //set timer
+        setTimeout(function () {
+          isAnimating = false;
+        }, delaytimer);
+      }
+    } else {
+      event.preventDefault();
+    }
+  }
+
+  //slide animation
+  function shiftSlides(direction) {
+    let newSlide;
+    if (direction == 1) {
+      newSlide = currentSlide + 1;
+      if (newSlide > slides.length) {
+        newSlide = slides.length;
+      }
+    } else if (direction == -1) {
+      newSlide = currentSlide - 1;
+      if (newSlide < 1) {
+        newSlide = 1;
+      }
+    }
+
+    //set class
+    if (newSlide != currentSlide) {
+      animateSlides(currentSlide, newSlide);
+    }
+  }
+
+  function animateSlides(cur, newSlide) {
+    for (let i = 1; i <= slides.length; i++) {
+      slides[i - 1].classList.remove(
+        "active",
+        "is--animating",
+        "ani--in",
+        "top--out",
+        "btm--in",
+        "btm--out",
+        "top--in"
+      );
+    }
+    // slides[cur - 1].classList.add("is--animating");
+    // slides[newSlide - 1].classList.add("is--animating", "active", "ani--in");
+
+    let color1 = slides[cur - 1].getAttribute("data-bgcolor");
+    let color2 = slides[newSlide - 1].getAttribute("data-bgcolor");
+
+    let tl = gsap.timeline({
+      onComplete: function () {
+        isAnimating = false;
+      },
+    });
+
+    let currentHeight = 0 - window.innerHeight;
+
+    if (cur < newSlide) {
+      bgbase.style.setProperty("--g1", color2);
+      bgbase.style.setProperty("--g2", color1);
+
+      slides[cur - 1].classList.add("top--out");
+      slides[newSlide - 1].classList.add("active", "ani--in", "btm--in");
+
+      tl.set(bgbase, { y: "0" }).to(bgbase, 2.5, { y: currentHeight });
+    } else {
+      bgbase.style.setProperty("--g1", color1);
+      bgbase.style.setProperty("--g2", color2);
+
+      slides[cur - 1].classList.add("btm--out");
+      slides[newSlide - 1].classList.add("active", "ani--in", "top--in");
+
+      tl.set(bgbase, { y: currentHeight }).to(bgbase, 2.5, { y: "0" });
+    }
+
+    //dots
+    for (let i = 1; i <= dots.length; i++) {
+      dots[i - 1].classList.remove("active");
+    }
+    dots[newSlide - 1].classList.add("active");
+
+    if (newSlide == 1) {
+    } else if (newSlide == slides.length) {
+    }
+
+    currentSlide = newSlide;
+  }
+
+  init();
+}
+
+function textSplitAni() {
+  var label = "ani-wordletters";
+
+  function init() {
+    var text_arr = document.getElementsByClassName(label);
+    for (var i = 0; i < text_arr.length; i++) {
+      if (!text_arr[i].classList.contains("taw--split")) {
+        text_arr[i].innerHTML = splitSentence(text_arr[i].innerHTML);
+        text_arr[i].classList.add("taw--split");
+      }
+    }
+  }
+
+  function splitSentence(str) {
+    //replace <br> tags with spaces
+    str = str.replace(/<br>/g, " ~break~ ");
+    str = str.replace(/<br\/>/g, " ~break~ ");
+    str = str.replace(/&amp;/g, "&");
+
+    //replace <span>
+    str = str.replace(/<span>/g, " ~span~ ");
+    str = str.replace(/<\/span>/g, " ~/span~ ");
+
+    //split into words
+    var str_html = "";
+    var words = str.split(" ");
+
+    for (var i = 0; i < words.length; i++) {
+      if (words[i] === "~break~") {
+        //if it is a break, add in special breakclass
+        str_html += '<span class="cus-ani-linebreak"></span>';
+      } else if (words[i] === "~span~") {
+        str_html += "<span>";
+      } else if (words[i] === "~/span~") {
+        str_html += "</span>";
+      } else if (words[i] === "") {
+        //do nothing
+      } else {
+        //else split into letters contained in a word
+        str_html += '<span class="cus-ani-word">';
+        for (var j = 0; j < words[i].length; j++) {
+          str_html +=
+            '<span class="cus-ani-letter">' + words[i].charAt(j) + "</span>";
+        }
+        str_html += "</span>";
+      }
+    }
+    return str_html;
+  }
+
+  init();
+}
+
+textSplitAni();
