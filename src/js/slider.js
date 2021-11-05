@@ -489,3 +489,22 @@ function textSplitAni() {
 }
 
 textSplitAni();
+
+// footer draggable slider
+const footerSlider = new Swiper(".footer_slider", {
+  loop: false,
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  centeredSlides: false,
+  // navigation: {
+  //   nextEl: ".vwidth_slider_next",
+  //   prevEl: ".vwidth_slider_prev",
+  // },
+  // breakpoints: {
+  //   992: {
+  //     slidesPerView: "auto",
+  //     centeredSlides: false,
+  //     spaceBetween: 10,
+  //   },
+  // },
+});
