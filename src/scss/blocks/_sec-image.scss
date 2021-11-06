@@ -53,6 +53,14 @@
   width: 227px;
   height: 63px;
 }
+.s_image_primary .btn_group {
+  display: flex;
+  flex-direction: column;
+  padding-top: 18px;
+}
+.s_image_primary .btn_group a {
+  margin-bottom: 39px;
+}
 
 @media screen and (min-width: 1024px) {
   .s_image_primary {
@@ -99,6 +107,11 @@
     margin-bottom: 44px;
     width: 190px;
     height: 56px;
+  }
+  .s_image_primary .btn_group a {
+    margin-bottom: 30px;
+    width: 260px;
+    height: 55px;
   }
 }
 
