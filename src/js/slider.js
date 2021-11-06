@@ -496,15 +496,12 @@ const footerSlider = new Swiper(".footer_slider", {
   slidesPerView: "auto",
   spaceBetween: 20,
   centeredSlides: false,
-  // navigation: {
-  //   nextEl: ".vwidth_slider_next",
-  //   prevEl: ".vwidth_slider_prev",
-  // },
-  // breakpoints: {
-  //   992: {
-  //     slidesPerView: "auto",
-  //     centeredSlides: false,
-  //     spaceBetween: 10,
-  //   },
-  // },
+  breakpoints: {
+    1280: {
+      spaceBetween: 32,
+    },
+    1600: {
+      spaceBetween: 42,
+    },
+  },
 });
