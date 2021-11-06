@@ -167,7 +167,8 @@
   color: #32322f;
 }
 .footer_copyright {
-  margin-right: 0;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
 }
 
 .footer_links a::after {
@@ -255,11 +256,13 @@
 @media only screen and (min-width: 1280px) {
   .footer_text p {
     font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 17px;
   }
   .footer_text h2 {
     font-size: 25px;
     margin-bottom: 28px;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
   }
   .footer_slider_wrapper {
     margin-right: -32px;
@@ -275,7 +278,7 @@
     padding-top: 0;
   }
   .footer_social {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
   }
   .footer_social_links {
     padding-top: 57px;
@@ -299,36 +302,71 @@
   .footer_address_left p {
     font-size: 16px;
     margin-bottom: 30px;
+    letter-spacing: 0.5px;
   }
   .footer_address_right {
     width: calc(100% - 380px);
   }
   .footer_btn {
-    margin-bottom: 100px;
+    margin-bottom: 87px;
   }
   .footer_links a::after {
-    height: 14px;
+    height: 11px;
   }
   .footer_copyright,
   .footer_links a {
     margin-bottom: 13px;
-    font-size: 14px;
-    margin-right: 8px;
-    padding-right: 8px;
+    font-size: 15px;
+    margin-right: 10px;
+    padding-right: 10px;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .footer_text {
-    width: 360px;
-    padding-top: 16px;
+    min-width: 360px;
+    padding-top: 44px;
+    width: auto;
+  }
+  .footer_text p {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
   .footer_text h2 {
-    font-size: 29px;
+    font-size: 35px;
     margin-bottom: 28px;
     letter-spacing: 2.5px;
   }
   .footer_slide {
     width: 300px;
+  }
+  .footer_social_links {
+    padding-top: 61px;
+  }
+  .footer_social_links a {
+    margin-right: 37px;
+  }
+  .footer_social_links a svg {
+    width: 40px;
+    height: 40px;
+  }
+  .footer_address_left h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .footer_address_left p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .footer_btn a {
+    max-width: calc(200px + 8vw);
+    height: 86px;
+    font-size: 23px;
+  }
+  .footer_copyright,
+  .footer_links a {
+    font-size: 18px;
+    margin-right: 12px;
+    padding-right: 12px;
   }
 }
