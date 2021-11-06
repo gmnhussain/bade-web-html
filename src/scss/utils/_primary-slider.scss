@@ -175,12 +175,13 @@
   text-align: left;
   transition: all 1s cubic-bezier(0.47, 0, 0.745, 0.715);
   opacity: 0;
+  margin-bottom: 8rem; //TODO: Hotfix, have to refactor in a proper way
 }
 .primary-slide.active .primary-slide-content {
   animation-delay: 1.8s;
 }
 .primary-slide-title {
-  margin-top: 260px;
+  margin-top: 180px;
   width: 100%;
   max-width: 375px;
   text-align: center;
@@ -268,9 +269,17 @@
   border-radius: 50%;
 }
 
-.primary-dot.active {
+.primary-dots span:hover {
   border-color: #fff;
 }
+
+.primary-dot:hover::after {
+  width: 9px;
+  height: 9px;
+  opacity: 1;
+}
+
+
 .primary-dot.active::after {
   opacity: 1;
 }
@@ -445,7 +454,7 @@
     /* padding-left: 152px; */
     /* padding-right: 170px; */
     /* max-width: 1000px; */
-    max-width: 570px;
+    max-width: 623px;
   }
   .primary-slide-text {
     display: block;
@@ -456,18 +465,18 @@
     color: #fff;
     margin-bottom: 50px;
     overflow: hidden;
-    padding-right: 60px;
+    //padding-right: 60px;
     line-height: 1.6;
     letter-spacing: 0.5px;
   }
   .primary-slide-title h1 {
-    font-size: 44px;
+    font-size: 42px;
     line-height: 1.4;
-    padding-right: 170px;
+    padding-right: 560px;
     letter-spacing: 3.5px;
   }
   .primary-slide-title {
-    margin-top: 256px;
+    margin-top: 226px;
     width: 100%;
     text-align: left;
     margin-bottom: 49px;
