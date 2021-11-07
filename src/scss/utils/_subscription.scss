@@ -44,7 +44,7 @@
   align-items: center;
 }
 .msubs_img {
-  width: 100%;
+  //width: 100%;
   height: calc(100% + 70px);
   position: relative;
 }
@@ -82,7 +82,7 @@
 .msubs_formtext {
   font-family: BegumSans;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 37px;
   text-align: center;
   color: #7b7564;
@@ -131,6 +131,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 15px;
 }
 .msubs_btn button {
   width: 226px;
@@ -181,8 +182,8 @@
     width: 90%;
     height: 80%;
     flex-direction: row;
-    max-width: 1170px;
-    max-height: 702px;
+    max-width: 968px;
+    max-height: 570px;
   }
   .msubs_imgsection {
     width: 50%;
@@ -238,14 +239,14 @@
 
 @media screen and (min-width: 1280px) {
   .msubs_formtitle {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 42px;
+    margin-bottom: 35px;
     letter-spacing: 2px;
   }
   .msubs_formtext {
-    font-size: 35px;
-    margin-bottom: 65px;
+    font-size: 28px;
+    margin-bottom: 50px;
     padding: 0 18px;
     line-height: 1.5;
   }
@@ -254,25 +255,25 @@
   }
   .msubs_input input {
     font-size: 13px;
-    padding-top: 22px;
+    padding-top: 18px;
   }
   .msubs_input label {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
   }
   .msubs_btn {
-    padding-top: 14px;
+    padding-top: 5px;
   }
   .msubs_btn button {
-    width: 234px;
-    height: 69px;
-    font-size: 17px;
+    width: 195px;
+    height: 58px;
+    font-size: 16px;
   }
   .msubs_offbtn {
-    width: 28px;
-    height: 28px;
-    top: 28px;
-    right: 28px;
+    width: 24px;
+    height: 24px;
+    top: 26px;
+    right: 24px;
   }
 }
 
