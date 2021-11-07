@@ -61,7 +61,7 @@
     width: 100%;
     padding-top: 50%;
     position: relative;
-    margin-bottom: 56px;
+    margin-bottom: 40px;
   }
   .ssnav {
     display: flex;
@@ -69,7 +69,7 @@
     align-items: center;
   }
   .ssnav_progress {
-    width: calc(80% - 100px);
+    width: calc(85% - 100px);
     height: 1px;
     background-color: #c2d5c1;
     position: relative;
@@ -84,7 +84,7 @@
     transition: width 750ms ease-in-out 250ms !important;
   }
   .ssnav_btns {
-    width: 20%;
+    width: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;

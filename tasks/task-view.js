@@ -16,10 +16,22 @@ const sections = {
     "./src/views/badehotellet.html",
     "./src/views/footer/footer-primary.html",
   ],
+  restaurant: [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-primary.html",
+    "./src/views/restaurant.html",
+    "./src/views/footer/footer-primary.html",
+  ],
   "oplev-bornholm": [
     "./src/views/header/head-primary.html", //
     "./src/views/header/header-primary.html",
     "./src/views/oplev-bornholm.html",
+    "./src/views/footer/footer-primary.html",
+  ],
+  "ophold-kampagner": [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-primary.html",
+    "./src/views/ophold-kampagner.html",
     "./src/views/footer/footer-primary.html",
   ],
   kontakt: [

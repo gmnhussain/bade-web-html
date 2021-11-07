@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
     });
   }
 
-  setTimeout(() => {
-    setSubscriptionOn();
-  }, 10000);
+  // setTimeout(() => {
+  //   setSubscriptionOn();
+  // }, 10000);
 });

@@ -1,9 +1,10 @@
 .primary-slider {
+  display: block;
   height: 100vh;
   width: 100vw;
   position: relative;
+  overflow: hidden;
 }
-
 .primary-slider-bgbase {
   width: 100%;
   height: 100%;
@@ -11,16 +12,13 @@
   top: 0;
   position: absolute;
   z-index: -1;
-  display: none;
+  display: block;
   overflow: hidden;
 }
 .primary-slider-bg {
   --g1: #222;
   --g2: #aaa;
   --direction: 0deg;
-  --g1: #365451;
-  --g2: #6b604a;
-  transform: translate(0, 0);
   position: absolute;
   width: 100%;
   height: 300%;
@@ -35,27 +33,53 @@
     var(--g2) 100%
   );
 }
-
 .primary-slides {
+  display: block;
   position: relative;
   width: 100%;
   height: 100%;
 }
+// .primary-slide {
+//   position: absolute;
+//   transition: opacity 1.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+//   will-change: opacity, z-index;
+//   top: 0;
+//   left: 0;
+//   overflow: hidden;
+//   opacity: 0;
+//   pointer-events: none;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 1;
+// }
 .primary-slide {
+  display: block;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  transition: opacity 1.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  will-change: opacity;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  width: 100vw;
-  height: 100vh;
+  transition: opacity 1.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  will-change: opacity;
 }
+// .primary-slide[data-type="masthead"] {
+//   width: 100%;
+//   height: 100vh;
+// }
 
+// .primary-slide.active {
+//   opacity: 1;
+//   pointer-events: all;
+//   z-index: 3;
+// }
 .primary-slide.active {
+  transition-delay: 1.3s;
   opacity: 1;
+  pointer-events: all;
+  z-index: 1;
 }
 .primary-slide-bg {
   position: absolute;
@@ -105,33 +129,78 @@
   object-position: center center;
 }
 
-.primary-slide-content {
-  position: relative;
+// .primary-slide-ctn-wrapper {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   padding-left: 285px;
+//   /* padding-top: 205px; */
+//   padding-right: 265px;
+//   padding-bottom: 175px;
+// }
+.primary-slide-ctn-wrapper {
   width: 100%;
+  height: calc(100% - 175px);
+  margin: 0 auto auto auto;
   display: flex;
   flex-direction: column;
-  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 1280px) {
+  .primary-slide-ctn-wrapper {
+    width: calc(100% - 200px);
+    height: calc(100% - 175px);
+    margin: 0 auto auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .primary-slide-ctn-wrapper {
+    width: calc(100% - 265px);
+    max-width: 1330px;
+  }
+}
+
+.primary-slide-content {
+  text-align: left;
+  transition: all 1s cubic-bezier(0.47, 0, 0.745, 0.715);
+  opacity: 0;
+  margin-bottom: 8rem; //TODO: Hotfix, have to refactor in a proper way
+}
+.primary-slide.active .primary-slide-content {
+  animation-delay: 1.8s;
 }
 .primary-slide-title {
-  margin-top: 275px;
+  margin-top: 180px;
   width: 100%;
   max-width: 375px;
   text-align: center;
-  margin-bottom: 58px;
+  margin-bottom: 50px;
 }
 .primary-slide-title h1 {
   font-family: "BegumSansRegularOtf";
-  font-size: 38px;
+  font-size: 32px;
   line-height: 49px;
   font-weight: 100;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: 3.5px;
 }
 
 // TODO: Temp sol.
 @media only screen and (max-width: 576px) {
   .primary-slide-title h1 {
-    padding: 0px 10px;
+    padding: 0px 15px;
   }
 }
 
@@ -148,12 +217,12 @@
 .primary-slide-links a {
   transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   width: 225px;
-  height: 50px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: BegumSans;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 29px;
   font-weight: 400;
   text-transform: uppercase;
@@ -161,10 +230,6 @@
   pointer-events: all;
   border: 1px solid #fff;
   color: #fff;
-}
-.primary-slide-links a:hover {
-  background-color: #fff;
-  color: #32322f;
 }
 
 .primary-dots {
@@ -204,9 +269,17 @@
   border-radius: 50%;
 }
 
-.primary-dot.active {
+.primary-dots span:hover {
   border-color: #fff;
 }
+
+.primary-dot:hover::after {
+  width: 9px;
+  height: 9px;
+  opacity: 1;
+}
+
+
 .primary-dot.active::after {
   opacity: 1;
 }
@@ -216,7 +289,7 @@
 
 @media only screen and (min-width: 992px) {
   .primary-slide-content {
-    padding: 0 183px;
+    /* padding: 0 183px; */
   }
   .primary-slide-title {
     margin-top: 360px;
@@ -224,6 +297,8 @@
     width: 100%;
     text-align: left;
     margin-bottom: 88px;
+    margin-top: 29vh;
+    max-width: 400px;
   }
   .primary-slide-title h1 {
     font-size: 63px;
@@ -251,12 +326,19 @@
     align-items: center;
   }
   .primary-slide-links a {
-    width: 235px;
-    height: 45px;
-    font-size: 16px;
+    width: 173px;
+    height: 43px;
+    font-size: 14px;
     line-height: 40px;
     margin-bottom: 0;
-    margin-right: 43px;
+    margin-right: 15px;
+  }
+  .primary-slide-links a:hover {
+    background-color: #a2c4a0;
+    border-color: #a2c4a0;
+  }
+  .primary-slide-links a:nth-child(2) {
+    width: 210px;
   }
   .primary-dots {
     margin: 15px 0;
@@ -270,8 +352,7 @@
     height: 22px;
     cursor: pointer;
   }
-  .primary-slide-title h1
-  .primary-dot::after {
+  .primary-slide-title h1 .primary-dot::after {
     width: 7px;
     height: 7px;
   }
@@ -311,11 +392,11 @@
 
 @media screen and (min-width: 992px) {
   .pslide_logo {
-    left: 85px;
+    left: 86px;
     transform: translateX(0);
   }
   .pslide_logo a img {
-    width: 210px;
+    width: 200px;
   }
 }
 
@@ -332,28 +413,37 @@
 }
 
 // TODO: Temp sol.
-@media only screen and (max-width: 576px) {
-  .primary-slide-content {
-    animation-delay: 1.4s;
-  }
-  .loaded .primary-slide-content {
-    opacity: 1;
-  }
-}
+// @media only screen and (max-width: 576px) {
+//   .primary-slide-content {
+//     animation-delay: 1.4s;
+//   }
+//   .loaded .primary-slide-content {
+//     opacity: 1;
+//   }
+// }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 0px) {
   .primary-slide.active.btm--in .primary-slide-content {
     animation-name: t_btm_in;
     animation-duration: 1.3s;
     animation-delay: 1.3s;
+    // opacity: 1;
+    transition-delay: 2.6s;
   }
+  .primary-slide.active.top--in .primary-slide-content {
+    animation-name: t_top_in;
+    animation-duration: 1.3s;
+    // opacity: 1;
+    transition-delay: 2.6s;
+  }
+
   .primary-slide.btm--out .primary-slide-content {
     animation-name: t_btm_out;
     animation-duration: 1.3s;
   }
-  .primary-slide.active.btm--in .primary-slide-content {
-    opacity: 1;
-    transition-delay: 2.6s;
+  .primary-slide.top--out .primary-slide-content {
+    animation-name: t_top_out;
+    animation-duration: 1.3s;
   }
 }
 
@@ -364,32 +454,41 @@
 
 @media only screen and (min-width: 992px) {
   .primary-slide-content {
-    padding-left: 155px;
-    padding-right: 170px;
-    max-width: 1000px;
+    /* padding-left: 152px; */
+    /* padding-right: 170px; */
+    /* max-width: 1000px; */
+    max-width: 623px;
   }
   .primary-slide-text {
     display: block;
     width: 100%;
     font-family: MartelSans;
-    font-size: 15px;
+    font-size: 0.9rem;
     font-weight: 200;
     color: #fff;
     margin-bottom: 50px;
     overflow: hidden;
-    padding-right: 60px;
+    //padding-right: 60px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
   }
   .primary-slide-title h1 {
-    font-size: 44px;
+    font-size: 42px;
     line-height: 1.4;
-    padding-right: 90px;
+    padding-right: 560px;
+    letter-spacing: 3.5px;
   }
   .primary-slide-title {
-    margin-top: 250px;
-    max-width: calc(400px + 250 * (100vw - 1280px) / 640);
+    margin-top: 226px;
     width: 100%;
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
+    max-width: 570px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .primary-slide-title {
     max-width: 100%;
   }
 }

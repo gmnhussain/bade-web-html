@@ -181,8 +181,8 @@
     width: 90%;
     height: 80%;
     flex-direction: row;
-    max-width: 1344px;
-    max-height: 806px;
+    max-width: 1170px;
+    max-height: 702px;
   }
   .msubs_imgsection {
     width: 50%;
@@ -197,7 +197,7 @@
     min-height: 100%;
     height: 100%;
     justify-content: center;
-    padding: 50px;
+    padding: 70px;
   }
   .msubs_formtitle {
     font-size: 18px;
@@ -238,13 +238,16 @@
 
 @media screen and (min-width: 1280px) {
   .msubs_formtitle {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 35px;
+    margin-bottom: 42px;
+    letter-spacing: 2px;
   }
   .msubs_formtext {
-    font-size: 30px;
-    margin-bottom: 42px;
+    font-size: 35px;
+    margin-bottom: 65px;
+    padding: 0 18px;
+    line-height: 1.5;
   }
   .msubs_input {
     margin-bottom: 37px;
@@ -254,15 +257,15 @@
     padding-top: 22px;
   }
   .msubs_input label {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 30px;
   }
   .msubs_btn {
     padding-top: 14px;
   }
   .msubs_btn button {
-    width: 224px;
-    height: 60px;
+    width: 234px;
+    height: 69px;
     font-size: 17px;
   }
   .msubs_offbtn {
@@ -274,6 +277,11 @@
 }
 
 @media screen and (min-width: 1600px) {
+  .msubs_content {
+    max-width: 1340px;
+    max-height: 802px;
+    min-height: 702px;
+  }
   .msubs_formtitle {
     font-size: 20px;
     line-height: 36px;
