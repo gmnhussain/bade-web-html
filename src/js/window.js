@@ -48,3 +48,21 @@ function unhighlightRoom(item) {
   var styleElem = document.head.appendChild(document.createElement("style"));
   styleElem.innerHTML = ".svg-div:before {opacity: 1;}";
 }
+
+$(".map_item_base").on("click", function () {
+  $(".map_item").removeClass("active");
+  document.querySelector(".map_item_base").classList.add("active");
+});
+
+for (let index = 1; index <= 20; index++) {
+  let roomNumber = index != 1 ? `-${index}` : "";
+  let selector = "#Mask_Group_14" + roomNumber;
+  let elemn = document.querySelector(selector);
+  if (elemn) {
+    elemn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      $(".map_item").removeClass("active");
+      document.querySelector(`#room${roomNumber}`).classList.add("active");
+    });
+  }
+}
