@@ -267,6 +267,9 @@ function initPrimarySlider() {
   let isAnimating = false;
   let delaytimer = 3000; // 1.7 secs
 
+  var xDown = null;
+  var yDown = null;
+
   function init() {
     let hasSlider = document.querySelectorAll(".primary-slides").length;
 
@@ -287,11 +290,54 @@ function initPrimarySlider() {
       window.addEventListener("wheel", wheelEvent);
       document.addEventListener("keyup", keyUpEvent);
       dotClickEvent();
+
+      document.addEventListener("touchstart", handleTouchStart, false);
+      document.addEventListener("touchmove", handleTouchMove, false);
     }
   }
 
   function startUp() {
     slides[0].classList.add("btm--in", "is--animating", "ani--in");
+  }
+
+  // touch event
+  function getTouches(e) {
+    return e.touches || e.originalEvent.touches;
+  }
+
+  function handleTouchStart(e) {
+    const firstTouch = getTouches(e)[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
+  }
+
+  function handleTouchMove(e) {
+    if (!xDown || !yDown) {
+      return;
+    }
+
+    var xUp = e.touches[0].clientX;
+    var yUp = e.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      if (xDiff > 0) {
+        shiftSlides(1);
+      } else {
+        shiftSlides(-1);
+      }
+    } else {
+      if (yDiff > 0) {
+        shiftSlides(1);
+      } else {
+        shiftSlides(-1);
+      }
+    }
+
+    xDown = null;
+    yDown = null;
   }
 
   //interaction
