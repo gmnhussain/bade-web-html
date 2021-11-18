@@ -64,6 +64,12 @@ const sections = {
     "./src/views/vaerelse-visning.html",
     "./src/views/footer/footer-primary.html",
   ],
+  map: [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-map.html",
+    "./src/views/map.html",
+    "./src/views/footer/footer-map.html",
+  ],
 };
 
 const createTask = (key) => {
