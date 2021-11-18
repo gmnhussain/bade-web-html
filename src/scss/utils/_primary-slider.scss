@@ -1,7 +1,7 @@
 .primary-slider {
   display: block;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -278,7 +278,6 @@
   height: 9px;
   opacity: 1;
 }
-
 
 .primary-dot.active::after {
   opacity: 1;
