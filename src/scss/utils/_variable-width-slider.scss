@@ -37,7 +37,7 @@
   height: 100%;
   position: absolute;
   top: 0;
-  z-index: 9;
+  z-index: -1;
   cursor: none;
 }
 .vwidth_slider_prev {
@@ -59,6 +59,10 @@
 }
 
 @media screen and (min-width: 992px) {
+  .vwidth_slider_next,
+  .vwidth_slider_prev {
+    z-index: 9;
+  }
   .s_vwidth_slider {
     padding-top: 46%;
   }
