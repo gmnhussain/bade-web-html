@@ -78,6 +78,17 @@
 // midtugeophold_page
 .midtugeophold_page {
 }
+.midtugeophold_page .s_banner_primary {
+  height: auto;
+}
+.midtugeophold_page .banner_bg::after {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .midtugeophold_page .banner_bg::after {
+    display: block;
+  }
+}
 
 // bornholm_med_page
 .bornholm_med_page {
