@@ -1,6 +1,13 @@
 // register plugin
 gsap.registerPlugin(ScrollTrigger);
 
+if (
+  window.location.pathname == "/" ||
+  window.location.pathname == "/index.html"
+) {
+  document.body.classList.add("home");
+}
+
 // window load
 window.addEventListener("load", () => {
   initPreloader();
