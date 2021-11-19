@@ -30,12 +30,19 @@ window.addEventListener("load", () => {
 });
 
 // map page
-function hightlightRoom(item) {
+function hightlightRoom(items) {
+  let ids = [];
+
+  items.forEach((item) => {
+    let id = "Mask_Group_" + item;
+    ids.push(id);
+  });
+
   var allGs = document.getElementsByTagName("g");
 
   for (var i = 1; i < allGs.length; i++) {
     var gElem = allGs[i];
-    if (item.id !== gElem.id) {
+    if (!ids.includes(gElem.id)) {
       gElem.style.opacity = "0.4";
     } else {
       gElem.style.opacity = "1";
@@ -61,7 +68,7 @@ function unhighlightRoom(item) {
 //   document.querySelector(".map_item_base").classList.add("active");
 // });
 
-for (let index = 1; index <= 20; index++) {
+for (let index = 1; index <= 6; index++) {
   let roomNumber = index != 1 ? `-${index}` : "";
   let selector = "#Mask_Group_14" + roomNumber;
   let elemn = document.querySelector(selector);
