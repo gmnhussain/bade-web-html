@@ -40,7 +40,7 @@ function hightlightRoom(items) {
 
   var allGs = document.getElementsByTagName("g");
 
-  for (var i = 1; i < allGs.length; i++) {
+  for (var i = 2; i < allGs.length; i++) {
     var gElem = allGs[i];
     if (!ids.includes(gElem.id)) {
       gElem.style.opacity = "0.4";
@@ -68,15 +68,22 @@ function unhighlightRoom(item) {
 //   document.querySelector(".map_item_base").classList.add("active");
 // });
 
-for (let index = 1; index <= 6; index++) {
-  let roomNumber = index != 1 ? `-${index}` : "";
-  let selector = "#Mask_Group_14" + roomNumber;
-  let elemn = document.querySelector(selector);
-  if (elemn) {
-    elemn.addEventListener("mouseenter", function (e) {
-      e.stopPropagation();
-      $(".map_item").removeClass("active");
-      document.querySelector(`#room${roomNumber}`).classList.add("active");
-    });
-  }
-}
+// for (let index = 1; index <= 6; index++) {
+//   let roomNumber = index != 1 ? `-${index}` : "";
+//   let selector = "#Mask_Group_14" + roomNumber;
+//   let elemn = document.querySelector(selector);
+//   if (elemn) {
+//     elemn.addEventListener("mouseenter", function (e) {
+//       e.stopPropagation();
+//       $(".map_item").removeClass("active");
+//       document.querySelector(`#room${roomNumber}`).classList.add("active");
+//     });
+//   }
+// }
+
+$("[data-room-no]").on("mouseenter", function () {
+  let roomNumber = $(this).attr("data-room-no");
+  roomNumber = roomNumber != 1 ? `-${roomNumber}` : "";
+  $(".map_item").removeClass("active");
+  document.querySelector(`#room${roomNumber}`).classList.add("active");
+});
