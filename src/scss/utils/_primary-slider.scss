@@ -151,7 +151,7 @@
   padding-top: 30px;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .primary-slide-ctn-wrapper {
     width: calc(100% - 200px);
     height: calc(100% - 175px);
@@ -164,7 +164,7 @@
     padding-left: 20px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .primary-slide-ctn-wrapper {
     width: calc(100% - 265px);
     max-width: 1330px;
@@ -478,7 +478,7 @@
   .primary-slide-title h1 {
     font-size: 42px;
     line-height: 1.4;
-    padding-right: 560px;
+    padding-right: 225px;
     letter-spacing: 3.5px;
   }
   .primary-slide-title {
@@ -490,9 +490,15 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .primary-slide-title {
     max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .primary-slide-title h1 {
+    padding-right: 560px;
   }
 }
 
