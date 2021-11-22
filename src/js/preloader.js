@@ -50,9 +50,9 @@ function initPreloader() {
   const tl = gsap.timeline();
 
   preBg.style.setProperty("--g1", firstcolor);
+  preLogo.style.animation = "unset";
 
-  tl.set(preLogo, { opacity: 0 })
-    .to(preLogo, 0.8, { opacity: 1, delay: 0.1 })
+  tl.to(preLogo, 0.8, { opacity: 1, delay: 0.1 })
     .to(preLogo, 0.8, { opacity: 0.3, delay: 0.7 }, "-=.6")
     .to(preLogo, 0.8, { opacity: 0.7, delay: 0.7 }, "-=.6")
     // .to(preLogo, 0.8, { opacity: 0.3, delay: 0.3 }, "-=.6")
