@@ -49,7 +49,7 @@ function initPreloader() {
 
   const tl = gsap.timeline();
 
-  preBg.style.setProperty("--g1", firstcolor);
+  // preBg.style.setProperty("--g1", firstcolor);
   preLogo.style.animation = "unset";
 
   tl.to(preLogo, 0.8, { opacity: 1, delay: 0.1 })

@@ -87,3 +87,29 @@ $("[data-room-no]").on("mouseenter", function () {
   $(".map_item").removeClass("active");
   document.querySelector(`#room${roomNumber}`).classList.add("active");
 });
+
+$(".msubs-btn").click(function(event){
+  event.preventDefault();
+  let name = $("input[name=navn]").val();
+  let email = $("input[name=email]").val();
+
+  if (name !="" && email !="") {
+    $.ajax({
+      url: "data/file.php",
+      type:"POST",
+      data:{
+        data:name + ", " + email,
+      },
+      // success:function(response){
+      //  if(response) {
+      //    $("#response-messages").html("<p style='color: #1e7e34;padding-top: 15px'>Message sent! We Will get back to you Soon</p>");
+      //  }
+      //  else{
+      //    $("#response-messages").html("<p style='color: #1e7e34;padding-top: 15px'>Error ! Please Try Again Later or call us</p>");
+      //  }
+      // },
+    });
+    $(".msubs_form").find('input').val("");
+    setSubscriptionOff();
+  }
+});
