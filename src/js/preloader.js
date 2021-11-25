@@ -17,8 +17,22 @@ function setSubscriptionOn() {
   }
 }
 
+function setHomeSubscriptionOn() {
+  const subscription = document.getElementById("home_subscription");
+  if (subscription) {
+    subscription.classList.add("open");
+  }
+}
+
 function setSubscriptionOff() {
   const subscription = document.getElementById("main_subscription");
+  if (subscription && subscription.classList.contains("open")) {
+    subscription.classList.remove("open");
+  }
+}
+
+function setHomeSubscriptionOff() {
+  const subscription = document.getElementById("home_subscription");
   if (subscription && subscription.classList.contains("open")) {
     subscription.classList.remove("open");
   }
@@ -74,4 +88,5 @@ $(".msubs_onbtn").on("click", () => {
 
 $(".msubs_offbtn").on("click", () => {
   setSubscriptionOff();
+  setHomeSubscriptionOff();
 });

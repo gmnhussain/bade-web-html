@@ -24,9 +24,9 @@ window.addEventListener("load", () => {
     });
   }
 
-  // setTimeout(() => {
-  //   setSubscriptionOn();
-  // }, 10000);
+  setTimeout(() => {
+    setHomeSubscriptionOn();
+  }, 13500);
 });
 
 // map page
@@ -88,17 +88,17 @@ $("[data-room-no]").on("mouseenter", function () {
   document.querySelector(`#room${roomNumber}`).classList.add("active");
 });
 
-$(".msubs-btn").click(function(event){
+$(".msubs-btn").click(function (event) {
   event.preventDefault();
   let name = $("input[name=navn]").val();
   let email = $("input[name=email]").val();
 
-  if (name !="" && email !="") {
+  if (name != "" && email != "") {
     $.ajax({
       url: "data/file.php",
-      type:"POST",
-      data:{
-        data:name + ", " + email,
+      type: "POST",
+      data: {
+        data: name + ", " + email,
       },
       // success:function(response){
       //  if(response) {
@@ -109,7 +109,7 @@ $(".msubs-btn").click(function(event){
       //  }
       // },
     });
-    $(".msubs_form").find('input').val("");
+    $(".msubs_form").find("input").val("");
     setSubscriptionOff();
   }
 });
