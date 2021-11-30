@@ -1,3 +1,9 @@
+// home_page
+.home_page {
+  height: 100%;
+  width: 100%;
+}
+
 // oplev_page
 .oplev_page {
 }
@@ -71,6 +77,17 @@
 
 // midtugeophold_page
 .midtugeophold_page {
+}
+.midtugeophold_page .s_banner_primary {
+  height: auto;
+}
+.midtugeophold_page .banner_bg::after {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .midtugeophold_page .banner_bg::after {
+    display: block;
+  }
 }
 
 // bornholm_med_page

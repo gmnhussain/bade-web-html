@@ -17,8 +17,22 @@ function setSubscriptionOn() {
   }
 }
 
+function setHomeSubscriptionOn() {
+  const subscription = document.getElementById("home_subscription");
+  if (subscription) {
+    subscription.classList.add("open");
+  }
+}
+
 function setSubscriptionOff() {
   const subscription = document.getElementById("main_subscription");
+  if (subscription && subscription.classList.contains("open")) {
+    subscription.classList.remove("open");
+  }
+}
+
+function setHomeSubscriptionOff() {
+  const subscription = document.getElementById("home_subscription");
   if (subscription && subscription.classList.contains("open")) {
     subscription.classList.remove("open");
   }
@@ -49,10 +63,10 @@ function initPreloader() {
 
   const tl = gsap.timeline();
 
-  preBg.style.setProperty("--g1", firstcolor);
+  // preBg.style.setProperty("--g1", firstcolor);
+  preLogo.style.animation = "unset";
 
-  tl.set(preLogo, { opacity: 0 })
-    .to(preLogo, 0.8, { opacity: 1, delay: 1.3 }, "-=.6")
+  tl.to(preLogo, 0.8, { opacity: 1, delay: 0.1 })
     .to(preLogo, 0.8, { opacity: 0.3, delay: 0.7 }, "-=.6")
     .to(preLogo, 0.8, { opacity: 0.7, delay: 0.7 }, "-=.6")
     // .to(preLogo, 0.8, { opacity: 0.3, delay: 0.3 }, "-=.6")
@@ -74,4 +88,5 @@ $(".msubs_onbtn").on("click", () => {
 
 $(".msubs_offbtn").on("click", () => {
   setSubscriptionOff();
+  setHomeSubscriptionOff();
 });

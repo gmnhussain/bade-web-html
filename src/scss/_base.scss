@@ -26,10 +26,12 @@ body.menu-on {
 .viewport {
   position: relative;
   overflow-x: hidden;
-  width: 100vw;
-  height: 100vh;
-  // update
+  width: 100%;
   height: auto;
+}
+.viewport-100 {
+  height: 100%;
+  width: 100%;
 }
 
 // page wrapper
