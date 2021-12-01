@@ -47,12 +47,13 @@
   margin: auto;
   padding-bottom: 40px;
   z-index: 99999;
-  opacity: 1;
-  animation-name: pre_ani;
-  animation-delay: 0ms;
-  animation-duration: 2.4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  opacity: 0;
+  //opacity: 1;
+  //animation-name: pre_ani;
+  //animation-delay: 0ms;
+  //animation-duration: 2.4s;
+  //animation-timing-function: linear;
+  //animation-iteration-count: infinite;
 }
 
 .preloader-logo img {
@@ -77,20 +78,20 @@
   }
 }
 
-@keyframes pre_ani {
-  0% {
-    opacity: 0.3;
-  }
-  40% {
-    opacity: 0.7;
-  }
-  60% {
-    opacity: 0.3;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.3;
-  }
-}
+//@keyframes pre_ani {
+//  0% {
+//    opacity: 0.3;
+//  }
+//  40% {
+//    opacity: 0.7;
+//  }
+//  60% {
+//    opacity: 0.3;
+//  }
+//  80% {
+//    opacity: 1;
+//  }
+//  100% {
+//    opacity: 0.3;
+//  }
+//}
