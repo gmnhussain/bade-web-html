@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
     setHomeSubscriptionOn();
-  }, 13500);
+  }, 6500);
 });
 
 // map page

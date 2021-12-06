@@ -285,7 +285,7 @@ function initPrimarySlider() {
       // }
       setTimeout(() => {
         startUp();
-      }, 7000);
+      }, 0);
 
       window.addEventListener("wheel", wheelEvent);
       document.addEventListener("keyup", keyUpEvent);
