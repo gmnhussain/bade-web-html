@@ -1,0 +1,123 @@
+.policy_container {
+  margin: 100px auto 0;
+  max-width: 2000px;
+  width: 90%;
+}
+.policy_header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background: #fff;
+}
+.policy_header h3 {
+  font-family: "MartelSans", serif;
+  margin: 2em 0;
+}
+.policy_header ul.policy_nav {
+  padding: 0;
+  margin: 0;
+  // update
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.policy_header ul.policy_nav li {
+  display: inline-block;
+  margin: 0 1em;
+  padding: 0 1em;
+  cursor: pointer;
+}
+.policy_header ul.policy_nav li.active {
+  border-bottom: 2px solid grey;
+}
+.policy_header ul.policy_nav li p {
+  font-family: "MartelSans", helvetica, sans-serif;
+  font-size: 14.5px;
+}
+.policy_header hr {
+  height: 0;
+  overflow: visible;
+  border-top: 1px solid #8c8b8b;
+  margin: 0 auto;
+  width: 70%;
+  opacity: 0.3;
+}
+
+.policy_ctn {
+  margin: 260px auto 50px;
+  max-width: 800px;
+  width: 90%;
+}
+.policy_panel {
+  display: none;
+}
+.policy_panel.active {
+  display: block;
+}
+.policy_panel h3 {
+  font-family: "MartelSans", serif;
+  font-weight: lighter;
+  letter-spacing: 0.125em;
+  margin: 2em 0 1em;
+}
+.policy_panel h4 {
+  font-family: "MartelSans", serif;
+  font-weight: lighter;
+  letter-spacing: 0.125em;
+}
+.policy_panel p {
+  font-family: "MartelSans", helvetica, sans-serif;
+  font-size: 14.5px;
+}
+.policy_panel ul {
+  padding-left: 1em;
+}
+.policy_panel ul li {
+  list-style-type: square;
+}
+.policy_panel#credits ul {
+  padding: 0;
+}
+.policy_panel#credits ul li {
+  list-style-type: none;
+}
+.policy_panel#disclaimer a {
+  text-decoration: underline;
+  color: #891a1c;
+}
+
+@media screen and (min-width: 1050px) {
+  .policy_panel .mobile {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .policy_container {
+    margin: 50px auto 0;
+    width: 100%;
+  }
+  .policy_header {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .policy_header ul.policy_nav li {
+    margin: 0 0.5em;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .policy_container {
+    margin: 240px auto 50px;
+  }
+  .policy_header ul.policy_nav li p {
+    font-size: 0.75em;
+  }
+}

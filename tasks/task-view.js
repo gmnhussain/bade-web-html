@@ -70,6 +70,12 @@ const sections = {
     "./src/views/map.html",
     "./src/views/footer/footer-map.html",
   ],
+  policy: [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-policy.html",
+    "./src/views/policy.html",
+    "./src/views/footer/footer-secondary.html",
+  ],
 };
 
 const createTask = (key) => {

@@ -113,3 +113,14 @@ $(".msubs-btn").click(function (event) {
     setSubscriptionOff();
   }
 });
+
+// policy page
+$(".policy_page [data-panel]").on("click", function () {
+  $("[data-panel]").removeClass("active");
+  $(this).addClass("active");
+
+  const panelId = $(this).attr("data-panel");
+
+  $(".policy_panel").removeClass("active");
+  $(`.policy_panel#${panelId}`).addClass("active");
+});
