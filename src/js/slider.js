@@ -265,7 +265,7 @@ const vwidthSlider = new Swiper(".vwidth_slider", {
 function initPrimarySlider() {
   let slides, dots, currentSlide, bgbase;
   let isAnimating = false;
-  let delaytimer = 3000; // 1.7 secs
+  // let delaytimer = 3000; // 1.7 secs
 
   var xDown = null;
   var yDown = null;
@@ -347,14 +347,8 @@ function initPrimarySlider() {
       dots[i - 1].addEventListener(
         "click",
         function (i) {
-          if (!isAnimating && i != currentSlide) {
-            isAnimating = true;
-
+          if (i != currentSlide) {
             animateSlides(currentSlide, i);
-            //set timer
-            setTimeout(function () {
-              isAnimating = false;
-            }, delaytimer);
           }
         }.bind(null, i)
       );
@@ -386,15 +380,7 @@ function initPrimarySlider() {
     if (event.deltaY != 0) {
       let delta = Math.sign(event.deltaY);
       // 1 is scrolldown, -1 is scroll up
-      if (!isAnimating) {
-        isAnimating = true;
-        shiftSlides(delta);
-
-        //set timer
-        setTimeout(function () {
-          isAnimating = false;
-        }, delaytimer);
-      }
+      shiftSlides(delta);
     } else {
       event.preventDefault();
     }
@@ -422,6 +408,9 @@ function initPrimarySlider() {
   }
 
   function animateSlides(cur, newSlide) {
+    if (isAnimating) return;
+    isAnimating = true;
+
     for (let i = 1; i <= slides.length; i++) {
       slides[i - 1].classList.remove(
         "active",
