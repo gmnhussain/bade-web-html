@@ -38,7 +38,7 @@ function hightlightRoom(items) {
     ids.push(id);
   });
 
-  var allGs = document.getElementsByTagName("g");
+  var allGs = $("#map-svg g");
 
   for (var i = 2; i < allGs.length; i++) {
     var gElem = allGs[i];
