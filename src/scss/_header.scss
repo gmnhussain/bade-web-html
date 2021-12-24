@@ -284,6 +284,18 @@
   .menu_button {
     display: block;
   }
+  // banner
+  .menu_button.menu_button_white {
+    position: fixed;
+    right: calc(0px + 2.4vw);
+  }
+  .menu_button_white .mbinner-text {
+    color: #7b7564;
+    font-size: calc(0px + 1.023vw);
+  }
+  .menu_button_white .mmb-officon > span {
+    background-color: #7b7564;
+  }
 }
 
 // banner nav
@@ -307,6 +319,10 @@
   left: 40px;
   z-index: 11;
   opacity: 1;
+}
+.banner_logo_center_mobile {
+  left: 50%;
+  transform: translateX(-50%);
 }
 .banner_logo {
   opacity: 0;
@@ -390,6 +406,9 @@
     top: 60px;
     left: 85px;
   }
+  .banner_logo_center_mobile {
+    transform: unset;
+  }
   .banner_logo a img {
     width: 180px;
   }
@@ -428,9 +447,21 @@
     background-color: #a2c4a0;
     border-color: #a2c4a0;
   }
+  .banner_btn.banner_btn_white a {
+    background-color: #a2c4a0;
+    border-color: #a2c4a0;
+  }
   .loaded .banner_btn {
     opacity: 1;
     pointer-events: all;
+  }
+  .banner_nav.banner_nav_white {
+    position: fixed;
+    right: calc(9px + 7.94vw);
+  }
+  .banner_nav_white .banner_line::before {
+    background-color: #ccc7b6;
+    width: 2px;
   }
 }
 
