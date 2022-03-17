@@ -70,6 +70,12 @@ const sections = {
     "./src/views/map.html",
     "./src/views/footer/footer-map.html",
   ],
+  "restaurant-menu": [
+    "./src/views/header/head-primary.html", //
+    "./src/views/header/header-restaurant-menu.html",
+    "./src/views/restaurant-menu.html",
+    "./src/views/footer/footer-secondary.html",
+  ],
 };
 
 const createTask = (key) => {

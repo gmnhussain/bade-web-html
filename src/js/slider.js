@@ -551,3 +551,12 @@ const footerSlider = new Swiper(".footer_slider", {
     },
   },
 });
+
+const restaurantMenuSlider = new Swiper(".restaurant_menu_slider", {
+  loop: true,
+  effect: "fade",
+  autoplay: {
+    delay: 5000,
+  },
+  speed: 500,
+});

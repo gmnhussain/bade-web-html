@@ -1,0 +1,162 @@
+.restaurant_menu_page {
+  width: 100%;
+  min-height: 100%;
+  padding: 36px;
+  background-color: #f9f7f0;
+}
+
+.restaurant_menu_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.restaurant_menu_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 51px;
+}
+
+.restaurant_menu_title {
+  margin-bottom: 49px;
+  font-family: "BegumSans";
+  font-weight: 400;
+  font-size: 29px;
+  color: #24221c;
+  line-height: 34px;
+}
+
+.restaurant_menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant_menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 229px;
+  height: 64px;
+  border: 1px solid #7b7564;
+  margin-bottom: 22px;
+  font-family: BegumSans;
+  font-size: 15px;
+  font-weight: 400;
+  color: #7b7564;
+}
+
+.restaurant_menu a:last-child {
+  margin-bottom: 0;
+}
+
+.restaurant_menu_footer {
+  margin-top: 166px;
+  font-family: "MartelSans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 41px;
+}
+
+.restaurant_menu_right {
+  width: 100%;
+  height: auto;
+}
+
+.restaurant_menu_slider {
+}
+
+.restaurant_menu_slider_wrapper {
+}
+
+.restaurant_menu_slide {
+  width: 100%;
+  padding-top: 95.7%;
+  position: relative;
+}
+
+.restaurant_menu_slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant_menu_slide {
+    padding-top: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .restaurant_menu_page {
+    padding: 0;
+  }
+  .restaurant_menu_wrapper {
+    flex-direction: row;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  .restaurant_menu_left {
+    width: 500px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .restaurant_menu_right {
+    width: calc(100% - 500px);
+    height: 100%;
+  }
+  .restaurant_menu_slider {
+    height: 100%;
+  }
+  .restaurant_menu_slider_wrapper {
+    width: 100%;
+  }
+  .restaurant_menu_slide {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    position: relative;
+  }
+  .restaurant_menu_slide img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .restaurant_menu_left {
+    width: 772px;
+  }
+  .restaurant_menu_right {
+    width: calc(100% - 772px);
+  }
+  .restaurant_menu_title {
+    margin-bottom: 116px;
+    font-size: 41px;
+    line-height: 41px;
+  }
+  .restaurant_menu a {
+    font-size: 20px;
+    width: 300px;
+    height: 80px;
+    margin-bottom: 45px;
+  }
+  .restaurant_menu_footer {
+    margin-top: 170px;
+    font-size: 19px;
+    line-height: 52px;
+  }
+}
